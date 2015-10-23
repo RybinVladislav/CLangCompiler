@@ -1,0 +1,14 @@
+char read () {
+	char c = 'q';
+	char arr[5];
+	arr = {''}
+}
+
+void main (int argc, string argv) {
+	int a = argc, c = 3, d;
+	int array[200];
+	a += 10 + 20 * (10 / 4) + sin(c * d + cos(123) + array[12]);
+	string b = "ABC";
+	b = argv;
+	c = F1(12.75, 6);
+}
