@@ -30,6 +30,11 @@ public class Context {
         idents.put(name, ident);
     }
     
+    public Ident inThisContext(String name)
+    {
+        return idents.containsKey(name) ? idents.get(name) : null;
+    }
+        
     private Ident function = null;
     
     public Ident getFunction(){

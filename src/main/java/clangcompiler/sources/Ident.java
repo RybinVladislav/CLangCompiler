@@ -5,6 +5,8 @@
  */
 package clangcompiler.sources;
 
+import org.antlr.runtime.tree.CommonTree;
+
 /**
  *
  * @author Andrey
@@ -13,6 +15,7 @@ public class Ident {
     private String name;
     private IdentType identType;
     private DataType dataType;
+    private CommonTree node;
 
     public String getName() {
         return name;
@@ -38,10 +41,19 @@ public class Ident {
         this.dataType = dataType;
     }
     
-    public Ident(String name, IdentType identType, DataType dataType)
+    public CommonTree getNode() {
+        return this.node;
+    }
+    
+    public void setNode(CommonTree node) {
+        this.node = node;
+    }
+    
+    public Ident(String name, IdentType identType, DataType dataType, CommonTree node)
         {
-            name = name;
-            identType = identType;
-            dataType = dataType;
+            this.name = name;
+            this.identType = identType;
+            this.dataType = dataType;
+            this.node = node;
         }
 }
