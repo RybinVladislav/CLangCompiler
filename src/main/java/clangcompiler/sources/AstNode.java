@@ -35,4 +35,13 @@ public class AstNode extends CommonTree{
     public void setDataType(DataType dataType) {
         this.dataType = dataType;
     }
+    
+    @Override
+    public String toString()
+    {
+        String result = super.toString();
+        if (dataType != DataType.Void)
+            result += ", " + SemanticChecker.dataTypeToStr(dataType);
+        return result;
+    }
 }

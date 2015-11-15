@@ -33,7 +33,6 @@ public class AstNodePrinter
         } catch (UnsupportedEncodingException e) {}
     }
 
-
     //DEPRECATED
     private static String getStringSubTree(Tree node, String indent, boolean root) {
         if (node == null)
