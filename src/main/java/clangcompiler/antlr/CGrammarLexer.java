@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g 2015-10-19 18:41:49
+// $ANTLR 3.5.2 D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g 2015-11-22 15:20:41
 package clangcompiler.antlr; 
 
 import org.antlr.runtime.*;
@@ -9,72 +9,65 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class CGrammarLexer extends Lexer {
 	public static final int EOF=-1;
-	public static final int T__64=64;
-	public static final int T__65=65;
-	public static final int T__66=66;
-	public static final int T__67=67;
-	public static final int T__68=68;
-	public static final int T__69=69;
-	public static final int ABS=4;
-	public static final int ADD=5;
-	public static final int ADD_ASSIGN=6;
-	public static final int AND=7;
-	public static final int ARRAY=8;
-	public static final int ARRAYCALL=9;
-	public static final int ASSIGN=10;
-	public static final int BEGIN=11;
-	public static final int BLOCK=12;
-	public static final int BREAK=13;
-	public static final int CHAR=14;
-	public static final int CHR=15;
-	public static final int CONTINUE=16;
-	public static final int COS=17;
-	public static final int DECLARE=18;
-	public static final int DIV=19;
-	public static final int DIV_ASSIGN=20;
-	public static final int DO=21;
-	public static final int DOUBLE=22;
-	public static final int DOWHILE=23;
-	public static final int ELSE=24;
-	public static final int END=25;
-	public static final int EQ=26;
-	public static final int FOR=27;
-	public static final int FUNC=28;
-	public static final int FUNCCALL=29;
-	public static final int IDENT=30;
-	public static final int IF=31;
-	public static final int INT=32;
-	public static final int LE=33;
-	public static final int LT=34;
-	public static final int ME=35;
-	public static final int ML_COMMENT=36;
-	public static final int MOD=37;
-	public static final int MOD_ASSIGN=38;
-	public static final int MT=39;
-	public static final int MUL=40;
-	public static final int MUL_ASSIGN=41;
-	public static final int NE=42;
-	public static final int NOT=43;
-	public static final int NUMBER=44;
-	public static final int OR=45;
-	public static final int PARAMS=46;
-	public static final int PRINTF=47;
-	public static final int PROGRAM=48;
-	public static final int RETURN=49;
-	public static final int SCANF=50;
-	public static final int SIN=51;
-	public static final int SL_COMMENT=52;
-	public static final int STR=53;
-	public static final int STRING=54;
-	public static final int STRLEN=55;
-	public static final int SUB=56;
-	public static final int SUB_ASSIGN=57;
-	public static final int TAN=58;
-	public static final int UNKNOWN=59;
-	public static final int VARDECL=60;
-	public static final int VOID=61;
-	public static final int WHILE=62;
-	public static final int WS=63;
+	public static final int T__57=57;
+	public static final int T__58=58;
+	public static final int T__59=59;
+	public static final int T__60=60;
+	public static final int T__61=61;
+	public static final int T__62=62;
+	public static final int ADD=4;
+	public static final int ADD_ASSIGN=5;
+	public static final int AND=6;
+	public static final int ARRAY=7;
+	public static final int ARRAYCALL=8;
+	public static final int ASSIGN=9;
+	public static final int BEGIN=10;
+	public static final int BLOCK=11;
+	public static final int BREAK=12;
+	public static final int CHAR=13;
+	public static final int CHR=14;
+	public static final int CONTINUE=15;
+	public static final int DECLARE=16;
+	public static final int DIV=17;
+	public static final int DIV_ASSIGN=18;
+	public static final int DO=19;
+	public static final int DOUBLE=20;
+	public static final int DOWHILE=21;
+	public static final int ELSE=22;
+	public static final int END=23;
+	public static final int EQ=24;
+	public static final int FOR=25;
+	public static final int FUNC=26;
+	public static final int FUNCCALL=27;
+	public static final int IDENT=28;
+	public static final int IF=29;
+	public static final int INT=30;
+	public static final int LE=31;
+	public static final int LT=32;
+	public static final int ME=33;
+	public static final int ML_COMMENT=34;
+	public static final int MOD=35;
+	public static final int MOD_ASSIGN=36;
+	public static final int MT=37;
+	public static final int MUL=38;
+	public static final int MUL_ASSIGN=39;
+	public static final int NE=40;
+	public static final int NOT=41;
+	public static final int NUMBER=42;
+	public static final int OR=43;
+	public static final int PARAMS=44;
+	public static final int PROGRAM=45;
+	public static final int RETURN=46;
+	public static final int SL_COMMENT=47;
+	public static final int STR=48;
+	public static final int STRING=49;
+	public static final int SUB=50;
+	public static final int SUB_ASSIGN=51;
+	public static final int UNKNOWN=52;
+	public static final int VARDECL=53;
+	public static final int VOID=54;
+	public static final int WHILE=55;
+	public static final int WS=56;
 
 	// delegates
 	// delegators
@@ -89,36 +82,15 @@ public class CGrammarLexer extends Lexer {
 	public CGrammarLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "/home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g"; }
-
-	// $ANTLR start "ABS"
-	public final void mABS() throws RecognitionException {
-		try {
-			int _type = ABS;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:9:5: ( 'abs' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:9:7: 'abs'
-			{
-			match("abs"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "ABS"
+	@Override public String getGrammarFileName() { return "D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g"; }
 
 	// $ANTLR start "BEGIN"
 	public final void mBEGIN() throws RecognitionException {
 		try {
 			int _type = BEGIN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:10:7: ( '{' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:10:9: '{'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:9:7: ( '{' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:9:9: '{'
 			{
 			match('{'); 
 			}
@@ -137,8 +109,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = BREAK;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:11:7: ( 'break' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:11:9: 'break'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:10:7: ( 'break' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:10:9: 'break'
 			{
 			match("break"); 
 
@@ -158,8 +130,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = CHAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:12:6: ( 'char' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:12:8: 'char'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:11:6: ( 'char' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:11:8: 'char'
 			{
 			match("char"); 
 
@@ -179,8 +151,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = CONTINUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:13:10: ( 'continue' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:13:12: 'continue'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:12:10: ( 'continue' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:12:12: 'continue'
 			{
 			match("continue"); 
 
@@ -195,34 +167,13 @@ public class CGrammarLexer extends Lexer {
 	}
 	// $ANTLR end "CONTINUE"
 
-	// $ANTLR start "COS"
-	public final void mCOS() throws RecognitionException {
-		try {
-			int _type = COS;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:14:5: ( 'cos' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:14:7: 'cos'
-			{
-			match("cos"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "COS"
-
 	// $ANTLR start "DO"
 	public final void mDO() throws RecognitionException {
 		try {
 			int _type = DO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:15:4: ( 'do' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:15:6: 'do'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:13:4: ( 'do' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:13:6: 'do'
 			{
 			match("do"); 
 
@@ -242,8 +193,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = DOUBLE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:16:8: ( 'double' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:16:10: 'double'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:14:8: ( 'double' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:14:10: 'double'
 			{
 			match("double"); 
 
@@ -263,8 +214,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = ELSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:17:6: ( 'else' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:17:8: 'else'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:15:6: ( 'else' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:15:8: 'else'
 			{
 			match("else"); 
 
@@ -284,8 +235,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = END;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:18:5: ( '}' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:18:7: '}'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:16:5: ( '}' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:16:7: '}'
 			{
 			match('}'); 
 			}
@@ -304,8 +255,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = FOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:19:5: ( 'for' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:19:7: 'for'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:17:5: ( 'for' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:17:7: 'for'
 			{
 			match("for"); 
 
@@ -325,8 +276,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:20:4: ( 'if' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:20:6: 'if'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:18:4: ( 'if' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:18:6: 'if'
 			{
 			match("if"); 
 
@@ -346,8 +297,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:21:5: ( 'int' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:21:7: 'int'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:19:5: ( 'int' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:19:7: 'int'
 			{
 			match("int"); 
 
@@ -362,34 +313,13 @@ public class CGrammarLexer extends Lexer {
 	}
 	// $ANTLR end "INT"
 
-	// $ANTLR start "PRINTF"
-	public final void mPRINTF() throws RecognitionException {
-		try {
-			int _type = PRINTF;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:22:8: ( 'printf' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:22:10: 'printf'
-			{
-			match("printf"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "PRINTF"
-
 	// $ANTLR start "RETURN"
 	public final void mRETURN() throws RecognitionException {
 		try {
 			int _type = RETURN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:23:8: ( 'return' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:23:10: 'return'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:20:8: ( 'return' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:20:10: 'return'
 			{
 			match("return"); 
 
@@ -404,55 +334,13 @@ public class CGrammarLexer extends Lexer {
 	}
 	// $ANTLR end "RETURN"
 
-	// $ANTLR start "SCANF"
-	public final void mSCANF() throws RecognitionException {
-		try {
-			int _type = SCANF;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:24:7: ( 'scanf' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:24:9: 'scanf'
-			{
-			match("scanf"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "SCANF"
-
-	// $ANTLR start "SIN"
-	public final void mSIN() throws RecognitionException {
-		try {
-			int _type = SIN;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:25:5: ( 'sin' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:25:7: 'sin'
-			{
-			match("sin"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "SIN"
-
 	// $ANTLR start "STRING"
 	public final void mSTRING() throws RecognitionException {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:26:8: ( 'string' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:26:10: 'string'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:21:8: ( 'string' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:21:10: 'string'
 			{
 			match("string"); 
 
@@ -467,55 +355,13 @@ public class CGrammarLexer extends Lexer {
 	}
 	// $ANTLR end "STRING"
 
-	// $ANTLR start "STRLEN"
-	public final void mSTRLEN() throws RecognitionException {
-		try {
-			int _type = STRLEN;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:27:8: ( 'strlen' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:27:10: 'strlen'
-			{
-			match("strlen"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "STRLEN"
-
-	// $ANTLR start "TAN"
-	public final void mTAN() throws RecognitionException {
-		try {
-			int _type = TAN;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:28:5: ( 'tan' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:28:7: 'tan'
-			{
-			match("tan"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "TAN"
-
 	// $ANTLR start "VOID"
 	public final void mVOID() throws RecognitionException {
 		try {
 			int _type = VOID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:29:6: ( 'void' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:29:8: 'void'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:22:6: ( 'void' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:22:8: 'void'
 			{
 			match("void"); 
 
@@ -535,8 +381,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = WHILE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:30:7: ( 'while' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:30:9: 'while'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:23:7: ( 'while' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:23:9: 'while'
 			{
 			match("while"); 
 
@@ -551,13 +397,13 @@ public class CGrammarLexer extends Lexer {
 	}
 	// $ANTLR end "WHILE"
 
-	// $ANTLR start "T__64"
-	public final void mT__64() throws RecognitionException {
+	// $ANTLR start "T__57"
+	public final void mT__57() throws RecognitionException {
 		try {
-			int _type = T__64;
+			int _type = T__57;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:31:7: ( '(' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:31:9: '('
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:24:7: ( '(' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:24:9: '('
 			{
 			match('('); 
 			}
@@ -569,15 +415,15 @@ public class CGrammarLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__64"
+	// $ANTLR end "T__57"
 
-	// $ANTLR start "T__65"
-	public final void mT__65() throws RecognitionException {
+	// $ANTLR start "T__58"
+	public final void mT__58() throws RecognitionException {
 		try {
-			int _type = T__65;
+			int _type = T__58;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:32:7: ( ')' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:32:9: ')'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:25:7: ( ')' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:25:9: ')'
 			{
 			match(')'); 
 			}
@@ -589,15 +435,15 @@ public class CGrammarLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__65"
+	// $ANTLR end "T__58"
 
-	// $ANTLR start "T__66"
-	public final void mT__66() throws RecognitionException {
+	// $ANTLR start "T__59"
+	public final void mT__59() throws RecognitionException {
 		try {
-			int _type = T__66;
+			int _type = T__59;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:33:7: ( ',' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:33:9: ','
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:26:7: ( ',' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:26:9: ','
 			{
 			match(','); 
 			}
@@ -609,15 +455,15 @@ public class CGrammarLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__66"
+	// $ANTLR end "T__59"
 
-	// $ANTLR start "T__67"
-	public final void mT__67() throws RecognitionException {
+	// $ANTLR start "T__60"
+	public final void mT__60() throws RecognitionException {
 		try {
-			int _type = T__67;
+			int _type = T__60;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:34:7: ( ';' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:34:9: ';'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:27:7: ( ';' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:27:9: ';'
 			{
 			match(';'); 
 			}
@@ -629,15 +475,15 @@ public class CGrammarLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__67"
+	// $ANTLR end "T__60"
 
-	// $ANTLR start "T__68"
-	public final void mT__68() throws RecognitionException {
+	// $ANTLR start "T__61"
+	public final void mT__61() throws RecognitionException {
 		try {
-			int _type = T__68;
+			int _type = T__61;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:35:7: ( '[' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:35:9: '['
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:28:7: ( '[' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:28:9: '['
 			{
 			match('['); 
 			}
@@ -649,15 +495,15 @@ public class CGrammarLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__68"
+	// $ANTLR end "T__61"
 
-	// $ANTLR start "T__69"
-	public final void mT__69() throws RecognitionException {
+	// $ANTLR start "T__62"
+	public final void mT__62() throws RecognitionException {
 		try {
-			int _type = T__69;
+			int _type = T__62;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:36:7: ( ']' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:36:9: ']'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:29:7: ( ']' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:29:9: ']'
 			{
 			match(']'); 
 			}
@@ -669,17 +515,17 @@ public class CGrammarLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__69"
+	// $ANTLR end "T__62"
 
 	// $ANTLR start "WS"
 	public final void mWS() throws RecognitionException {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:63:3: ( ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+ )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:64:3: ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:54:3: ( ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+ )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:55:3: ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+
 			{
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:64:3: ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:55:3: ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -691,7 +537,7 @@ public class CGrammarLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:
 					{
 					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
 						input.consume();
@@ -731,12 +577,12 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = SL_COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:69:11: ( '//' ( options {greedy=false; } : . )* ( '\\r' )? '\\n' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:70:3: '//' ( options {greedy=false; } : . )* ( '\\r' )? '\\n'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:60:11: ( '//' ( options {greedy=false; } : . )* ( '\\r' )? '\\n' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:61:3: '//' ( options {greedy=false; } : . )* ( '\\r' )? '\\n'
 			{
 			match("//"); 
 
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:70:8: ( options {greedy=false; } : . )*
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:61:8: ( options {greedy=false; } : . )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -753,7 +599,7 @@ public class CGrammarLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:70:36: .
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:61:36: .
 					{
 					matchAny(); 
 					}
@@ -764,7 +610,7 @@ public class CGrammarLexer extends Lexer {
 				}
 			}
 
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:70:40: ( '\\r' )?
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:61:40: ( '\\r' )?
 			int alt3=2;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0=='\r') ) {
@@ -772,7 +618,7 @@ public class CGrammarLexer extends Lexer {
 			}
 			switch (alt3) {
 				case 1 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:70:40: '\\r'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:61:40: '\\r'
 					{
 					match('\r'); 
 					}
@@ -800,12 +646,12 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = ML_COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:74:11: ( '/*' ( options {greedy=false; } : . )* '*/' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:75:3: '/*' ( options {greedy=false; } : . )* '*/'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:65:11: ( '/*' ( options {greedy=false; } : . )* '*/' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:66:3: '/*' ( options {greedy=false; } : . )* '*/'
 			{
 			match("/*"); 
 
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:75:8: ( options {greedy=false; } : . )*
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:66:8: ( options {greedy=false; } : . )*
 			loop4:
 			while (true) {
 				int alt4=2;
@@ -826,7 +672,7 @@ public class CGrammarLexer extends Lexer {
 
 				switch (alt4) {
 				case 1 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:75:36: .
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:66:36: .
 					{
 					matchAny(); 
 					}
@@ -858,10 +704,10 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = NUMBER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:80:8: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:80:11: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:71:8: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:71:11: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
 			{
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:80:11: ( '0' .. '9' )+
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:71:11: ( '0' .. '9' )+
 			int cnt5=0;
 			loop5:
 			while (true) {
@@ -873,7 +719,7 @@ public class CGrammarLexer extends Lexer {
 
 				switch (alt5) {
 				case 1 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -894,7 +740,7 @@ public class CGrammarLexer extends Lexer {
 				cnt5++;
 			}
 
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:80:23: ( '.' ( '0' .. '9' )+ )?
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:71:23: ( '.' ( '0' .. '9' )+ )?
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0=='.') ) {
@@ -902,10 +748,10 @@ public class CGrammarLexer extends Lexer {
 			}
 			switch (alt7) {
 				case 1 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:80:24: '.' ( '0' .. '9' )+
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:71:24: '.' ( '0' .. '9' )+
 					{
 					match('.'); 
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:80:28: ( '0' .. '9' )+
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:71:28: ( '0' .. '9' )+
 					int cnt6=0;
 					loop6:
 					while (true) {
@@ -917,7 +763,7 @@ public class CGrammarLexer extends Lexer {
 
 						switch (alt6) {
 						case 1 :
-							// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:
+							// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:
 							{
 							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 								input.consume();
@@ -959,11 +805,11 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = STR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:83:5: ( '\"' ( . )* '\"' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:83:7: '\"' ( . )* '\"'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:74:5: ( '\"' ( . )* '\"' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:74:7: '\"' ( . )* '\"'
 			{
 			match('\"'); 
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:83:11: ( . )*
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:74:11: ( . )*
 			loop8:
 			while (true) {
 				int alt8=2;
@@ -977,7 +823,7 @@ public class CGrammarLexer extends Lexer {
 
 				switch (alt8) {
 				case 1 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:83:12: .
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:74:12: .
 					{
 					matchAny(); 
 					}
@@ -1005,11 +851,11 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = CHR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:5: ( '\\'' ( . | '\\\\n' | '\\\\0' | '\\\\t' | '\\\\f' | '\\\\a' | '\\\\v' | '\\\\b' | '\\\\r' | '\\\\\\\\' | '\\\\\\'' | '\\\\\\\"' ) '\\'' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:7: '\\'' ( . | '\\\\n' | '\\\\0' | '\\\\t' | '\\\\f' | '\\\\a' | '\\\\v' | '\\\\b' | '\\\\r' | '\\\\\\\\' | '\\\\\\'' | '\\\\\\\"' ) '\\''
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:5: ( '\\'' ( . | '\\\\n' | '\\\\0' | '\\\\t' | '\\\\f' | '\\\\a' | '\\\\v' | '\\\\b' | '\\\\r' | '\\\\\\\\' | '\\\\\\'' | '\\\\\\\"' ) '\\'' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:7: '\\'' ( . | '\\\\n' | '\\\\0' | '\\\\t' | '\\\\f' | '\\\\a' | '\\\\v' | '\\\\b' | '\\\\r' | '\\\\\\\\' | '\\\\\\'' | '\\\\\\\"' ) '\\''
 			{
 			match('\''); 
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:12: ( . | '\\\\n' | '\\\\0' | '\\\\t' | '\\\\f' | '\\\\a' | '\\\\v' | '\\\\b' | '\\\\r' | '\\\\\\\\' | '\\\\\\'' | '\\\\\\\"' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:12: ( . | '\\\\n' | '\\\\0' | '\\\\t' | '\\\\f' | '\\\\a' | '\\\\v' | '\\\\b' | '\\\\r' | '\\\\\\\\' | '\\\\\\'' | '\\\\\\\"' )
 			int alt9=12;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0=='\\') ) {
@@ -1101,83 +947,83 @@ public class CGrammarLexer extends Lexer {
 
 			switch (alt9) {
 				case 1 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:13: .
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:13: .
 					{
 					matchAny(); 
 					}
 					break;
 				case 2 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:17: '\\\\n'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:17: '\\\\n'
 					{
 					match("\\n"); 
 
 					}
 					break;
 				case 3 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:25: '\\\\0'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:25: '\\\\0'
 					{
 					match("\\0"); 
 
 					}
 					break;
 				case 4 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:33: '\\\\t'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:33: '\\\\t'
 					{
 					match("\\t"); 
 
 					}
 					break;
 				case 5 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:41: '\\\\f'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:41: '\\\\f'
 					{
 					match("\\f"); 
 
 					}
 					break;
 				case 6 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:49: '\\\\a'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:49: '\\\\a'
 					{
 					match("\\a"); 
 
 					}
 					break;
 				case 7 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:57: '\\\\v'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:57: '\\\\v'
 					{
 					match("\\v"); 
 
 					}
 					break;
 				case 8 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:65: '\\\\b'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:65: '\\\\b'
 					{
 					match("\\b"); 
 
 					}
 					break;
 				case 9 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:73: '\\\\r'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:73: '\\\\r'
 					{
 					match("\\r"); 
 
 					}
 					break;
 				case 10 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:81: '\\\\\\\\'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:81: '\\\\\\\\'
 					{
 					match("\\\\"); 
 
 					}
 					break;
 				case 11 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:90: '\\\\\\''
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:90: '\\\\\\''
 					{
 					match("\\'"); 
 
 					}
 					break;
 				case 12 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:99: '\\\\\\\"'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:99: '\\\\\\\"'
 					{
 					match("\\\""); 
 
@@ -1203,8 +1049,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = IDENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:87:7: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:87:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:78:7: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:78:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -1214,7 +1060,7 @@ public class CGrammarLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:88:10: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:79:10: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
 			loop10:
 			while (true) {
 				int alt10=2;
@@ -1225,7 +1071,7 @@ public class CGrammarLexer extends Lexer {
 
 				switch (alt10) {
 				case 1 :
-					// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -1259,8 +1105,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = ADD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:91:5: ( '+' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:91:7: '+'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:82:5: ( '+' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:82:7: '+'
 			{
 			match('+'); 
 			}
@@ -1279,8 +1125,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = SUB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:92:5: ( '-' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:92:7: '-'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:83:5: ( '-' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:83:7: '-'
 			{
 			match('-'); 
 			}
@@ -1299,8 +1145,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = MUL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:93:5: ( '*' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:93:7: '*'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:84:5: ( '*' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:84:7: '*'
 			{
 			match('*'); 
 			}
@@ -1319,8 +1165,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = DIV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:94:5: ( '/' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:94:7: '/'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:5: ( '/' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:7: '/'
 			{
 			match('/'); 
 			}
@@ -1339,8 +1185,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = MOD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:95:5: ( '%' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:95:7: '%'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:86:5: ( '%' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:86:7: '%'
 			{
 			match('%'); 
 			}
@@ -1359,8 +1205,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:97:8: ( '=' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:97:10: '='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:88:8: ( '=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:88:10: '='
 			{
 			match('='); 
 			}
@@ -1379,8 +1225,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = EQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:99:4: ( '==' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:99:6: '=='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:90:4: ( '==' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:90:6: '=='
 			{
 			match("=="); 
 
@@ -1400,8 +1246,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = NE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:100:4: ( '!=' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:100:6: '!='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:91:4: ( '!=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:91:6: '!='
 			{
 			match("!="); 
 
@@ -1421,8 +1267,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = ME;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:101:4: ( '>=' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:101:6: '>='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:92:4: ( '>=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:92:6: '>='
 			{
 			match(">="); 
 
@@ -1442,8 +1288,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = LE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:102:4: ( '<=' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:102:6: '<='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:93:4: ( '<=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:93:6: '<='
 			{
 			match("<="); 
 
@@ -1463,8 +1309,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = MT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:103:4: ( '>' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:103:6: '>'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:94:4: ( '>' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:94:6: '>'
 			{
 			match('>'); 
 			}
@@ -1483,8 +1329,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = LT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:104:4: ( '<' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:104:6: '<'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:95:4: ( '<' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:95:6: '<'
 			{
 			match('<'); 
 			}
@@ -1503,8 +1349,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = NOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:106:5: ( '!' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:106:7: '!'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:97:5: ( '!' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:97:7: '!'
 			{
 			match('!'); 
 			}
@@ -1523,8 +1369,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = AND;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:107:5: ( '&&' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:107:7: '&&'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:98:5: ( '&&' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:98:7: '&&'
 			{
 			match("&&"); 
 
@@ -1544,8 +1390,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = OR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:108:4: ( '||' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:108:6: '||'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:99:4: ( '||' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:99:6: '||'
 			{
 			match("||"); 
 
@@ -1565,8 +1411,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = ADD_ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:111:2: ( '+=' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:111:4: '+='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:102:2: ( '+=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:102:4: '+='
 			{
 			match("+="); 
 
@@ -1586,8 +1432,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = SUB_ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:113:2: ( '-=' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:113:4: '-='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:104:2: ( '-=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:104:4: '-='
 			{
 			match("-="); 
 
@@ -1607,8 +1453,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = MUL_ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:115:2: ( '*=' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:115:4: '*='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:106:2: ( '*=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:106:4: '*='
 			{
 			match("*="); 
 
@@ -1628,8 +1474,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = DIV_ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:117:2: ( '/=' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:117:4: '/='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:108:2: ( '/=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:108:4: '/='
 			{
 			match("/="); 
 
@@ -1649,8 +1495,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = MOD_ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:119:2: ( '%=' )
-			// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:119:4: '%='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:110:2: ( '%=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:110:4: '%='
 			{
 			match("%="); 
 
@@ -1667,390 +1513,341 @@ public class CGrammarLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:8: ( ABS | BEGIN | BREAK | CHAR | CONTINUE | COS | DO | DOUBLE | ELSE | END | FOR | IF | INT | PRINTF | RETURN | SCANF | SIN | STRING | STRLEN | TAN | VOID | WHILE | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | WS | SL_COMMENT | ML_COMMENT | NUMBER | STR | CHR | IDENT | ADD | SUB | MUL | DIV | MOD | ASSIGN | EQ | NE | ME | LE | MT | LT | NOT | AND | OR | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN )
-		int alt11=55;
+		// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:8: ( BEGIN | BREAK | CHAR | CONTINUE | DO | DOUBLE | ELSE | END | FOR | IF | INT | RETURN | STRING | VOID | WHILE | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | WS | SL_COMMENT | ML_COMMENT | NUMBER | STR | CHR | IDENT | ADD | SUB | MUL | DIV | MOD | ASSIGN | EQ | NE | ME | LE | MT | LT | NOT | AND | OR | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN )
+		int alt11=48;
 		alt11 = dfa11.predict(input);
 		switch (alt11) {
 			case 1 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:10: ABS
-				{
-				mABS(); 
-
-				}
-				break;
-			case 2 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:14: BEGIN
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:10: BEGIN
 				{
 				mBEGIN(); 
 
 				}
 				break;
-			case 3 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:20: BREAK
+			case 2 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:16: BREAK
 				{
 				mBREAK(); 
 
 				}
 				break;
-			case 4 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:26: CHAR
+			case 3 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:22: CHAR
 				{
 				mCHAR(); 
 
 				}
 				break;
-			case 5 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:31: CONTINUE
+			case 4 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:27: CONTINUE
 				{
 				mCONTINUE(); 
 
 				}
 				break;
-			case 6 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:40: COS
-				{
-				mCOS(); 
-
-				}
-				break;
-			case 7 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:44: DO
+			case 5 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:36: DO
 				{
 				mDO(); 
 
 				}
 				break;
-			case 8 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:47: DOUBLE
+			case 6 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:39: DOUBLE
 				{
 				mDOUBLE(); 
 
 				}
 				break;
-			case 9 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:54: ELSE
+			case 7 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:46: ELSE
 				{
 				mELSE(); 
 
 				}
 				break;
-			case 10 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:59: END
+			case 8 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:51: END
 				{
 				mEND(); 
 
 				}
 				break;
-			case 11 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:63: FOR
+			case 9 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:55: FOR
 				{
 				mFOR(); 
 
 				}
 				break;
-			case 12 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:67: IF
+			case 10 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:59: IF
 				{
 				mIF(); 
 
 				}
 				break;
-			case 13 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:70: INT
+			case 11 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:62: INT
 				{
 				mINT(); 
 
 				}
 				break;
-			case 14 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:74: PRINTF
-				{
-				mPRINTF(); 
-
-				}
-				break;
-			case 15 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:81: RETURN
+			case 12 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:66: RETURN
 				{
 				mRETURN(); 
 
 				}
 				break;
-			case 16 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:88: SCANF
-				{
-				mSCANF(); 
-
-				}
-				break;
-			case 17 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:94: SIN
-				{
-				mSIN(); 
-
-				}
-				break;
-			case 18 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:98: STRING
+			case 13 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:73: STRING
 				{
 				mSTRING(); 
 
 				}
 				break;
-			case 19 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:105: STRLEN
-				{
-				mSTRLEN(); 
-
-				}
-				break;
-			case 20 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:112: TAN
-				{
-				mTAN(); 
-
-				}
-				break;
-			case 21 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:116: VOID
+			case 14 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:80: VOID
 				{
 				mVOID(); 
 
 				}
 				break;
-			case 22 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:121: WHILE
+			case 15 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:85: WHILE
 				{
 				mWHILE(); 
 
 				}
 				break;
-			case 23 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:127: T__64
+			case 16 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:91: T__57
 				{
-				mT__64(); 
+				mT__57(); 
 
 				}
 				break;
-			case 24 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:133: T__65
+			case 17 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:97: T__58
 				{
-				mT__65(); 
+				mT__58(); 
 
 				}
 				break;
-			case 25 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:139: T__66
+			case 18 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:103: T__59
 				{
-				mT__66(); 
+				mT__59(); 
 
 				}
 				break;
-			case 26 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:145: T__67
+			case 19 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:109: T__60
 				{
-				mT__67(); 
+				mT__60(); 
 
 				}
 				break;
-			case 27 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:151: T__68
+			case 20 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:115: T__61
 				{
-				mT__68(); 
+				mT__61(); 
 
 				}
 				break;
-			case 28 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:157: T__69
+			case 21 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:121: T__62
 				{
-				mT__69(); 
+				mT__62(); 
 
 				}
 				break;
-			case 29 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:163: WS
+			case 22 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:127: WS
 				{
 				mWS(); 
 
 				}
 				break;
-			case 30 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:166: SL_COMMENT
+			case 23 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:130: SL_COMMENT
 				{
 				mSL_COMMENT(); 
 
 				}
 				break;
-			case 31 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:177: ML_COMMENT
+			case 24 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:141: ML_COMMENT
 				{
 				mML_COMMENT(); 
 
 				}
 				break;
-			case 32 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:188: NUMBER
+			case 25 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:152: NUMBER
 				{
 				mNUMBER(); 
 
 				}
 				break;
-			case 33 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:195: STR
+			case 26 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:159: STR
 				{
 				mSTR(); 
 
 				}
 				break;
-			case 34 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:199: CHR
+			case 27 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:163: CHR
 				{
 				mCHR(); 
 
 				}
 				break;
-			case 35 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:203: IDENT
+			case 28 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:167: IDENT
 				{
 				mIDENT(); 
 
 				}
 				break;
-			case 36 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:209: ADD
+			case 29 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:173: ADD
 				{
 				mADD(); 
 
 				}
 				break;
-			case 37 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:213: SUB
+			case 30 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:177: SUB
 				{
 				mSUB(); 
 
 				}
 				break;
-			case 38 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:217: MUL
+			case 31 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:181: MUL
 				{
 				mMUL(); 
 
 				}
 				break;
-			case 39 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:221: DIV
+			case 32 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:185: DIV
 				{
 				mDIV(); 
 
 				}
 				break;
-			case 40 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:225: MOD
+			case 33 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:189: MOD
 				{
 				mMOD(); 
 
 				}
 				break;
-			case 41 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:229: ASSIGN
+			case 34 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:193: ASSIGN
 				{
 				mASSIGN(); 
 
 				}
 				break;
-			case 42 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:236: EQ
+			case 35 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:200: EQ
 				{
 				mEQ(); 
 
 				}
 				break;
-			case 43 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:239: NE
+			case 36 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:203: NE
 				{
 				mNE(); 
 
 				}
 				break;
-			case 44 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:242: ME
+			case 37 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:206: ME
 				{
 				mME(); 
 
 				}
 				break;
-			case 45 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:245: LE
+			case 38 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:209: LE
 				{
 				mLE(); 
 
 				}
 				break;
-			case 46 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:248: MT
+			case 39 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:212: MT
 				{
 				mMT(); 
 
 				}
 				break;
-			case 47 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:251: LT
+			case 40 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:215: LT
 				{
 				mLT(); 
 
 				}
 				break;
-			case 48 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:254: NOT
+			case 41 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:218: NOT
 				{
 				mNOT(); 
 
 				}
 				break;
-			case 49 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:258: AND
+			case 42 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:222: AND
 				{
 				mAND(); 
 
 				}
 				break;
-			case 50 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:262: OR
+			case 43 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:226: OR
 				{
 				mOR(); 
 
 				}
 				break;
-			case 51 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:265: ADD_ASSIGN
+			case 44 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:229: ADD_ASSIGN
 				{
 				mADD_ASSIGN(); 
 
 				}
 				break;
-			case 52 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:276: SUB_ASSIGN
+			case 45 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:240: SUB_ASSIGN
 				{
 				mSUB_ASSIGN(); 
 
 				}
 				break;
-			case 53 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:287: MUL_ASSIGN
+			case 46 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:251: MUL_ASSIGN
 				{
 				mMUL_ASSIGN(); 
 
 				}
 				break;
-			case 54 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:298: DIV_ASSIGN
+			case 47 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:262: DIV_ASSIGN
 				{
 				mDIV_ASSIGN(); 
 
 				}
 				break;
-			case 55 :
-				// /home/vlad/NetBeansProjects/CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:309: MOD_ASSIGN
+			case 48 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:273: MOD_ASSIGN
 				{
 				mMOD_ASSIGN(); 
 
@@ -2063,190 +1860,154 @@ public class CGrammarLexer extends Lexer {
 
 	protected DFA11 dfa11 = new DFA11(this);
 	static final String DFA11_eotS =
-		"\1\uffff\1\33\1\uffff\4\33\1\uffff\10\33\7\uffff\1\72\4\uffff\1\74\1\76"+
-		"\1\100\1\102\1\104\1\106\1\110\1\112\2\uffff\4\33\1\121\2\33\1\124\11"+
-		"\33\24\uffff\1\136\3\33\1\142\1\33\1\uffff\1\33\1\145\1\uffff\1\146\3"+
-		"\33\1\152\1\33\1\155\2\33\1\uffff\1\33\1\161\1\33\1\uffff\1\33\1\164\2"+
-		"\uffff\3\33\1\uffff\2\33\1\uffff\1\172\1\33\1\174\1\uffff\2\33\1\uffff"+
-		"\2\33\1\u0081\2\33\1\uffff\1\u0084\1\uffff\1\33\1\u0086\1\u0087\1\u0088"+
-		"\1\uffff\1\u0089\1\u008a\1\uffff\1\33\5\uffff\1\u008c\1\uffff";
+		"\2\uffff\4\30\1\uffff\6\30\7\uffff\1\62\4\uffff\1\64\1\66\1\70\1\72\1"+
+		"\74\1\76\1\100\1\102\2\uffff\3\30\1\107\2\30\1\112\5\30\24\uffff\4\30"+
+		"\1\uffff\1\30\1\125\1\uffff\1\126\5\30\1\134\2\30\1\137\2\uffff\2\30\1"+
+		"\142\1\30\1\144\1\uffff\2\30\1\uffff\2\30\1\uffff\1\151\1\uffff\1\30\1"+
+		"\153\1\154\1\155\1\uffff\1\30\3\uffff\1\157\1\uffff";
 	static final String DFA11_eofS =
-		"\u008d\uffff";
+		"\160\uffff";
 	static final String DFA11_minS =
-		"\1\11\1\142\1\uffff\1\162\1\150\1\157\1\154\1\uffff\1\157\1\146\1\162"+
-		"\1\145\1\143\1\141\1\157\1\150\7\uffff\1\52\4\uffff\10\75\2\uffff\1\163"+
-		"\1\145\1\141\1\156\1\60\1\163\1\162\1\60\1\164\1\151\1\164\1\141\1\156"+
-		"\1\162\1\156\2\151\24\uffff\1\60\1\141\1\162\1\164\1\60\1\142\1\uffff"+
-		"\1\145\1\60\1\uffff\1\60\1\156\1\165\1\156\1\60\1\151\1\60\1\144\1\154"+
-		"\1\uffff\1\153\1\60\1\151\1\uffff\1\154\1\60\2\uffff\1\164\1\162\1\146"+
-		"\1\uffff\1\156\1\145\1\uffff\1\60\1\145\1\60\1\uffff\1\156\1\145\1\uffff"+
-		"\1\146\1\156\1\60\1\147\1\156\1\uffff\1\60\1\uffff\1\165\3\60\1\uffff"+
-		"\2\60\1\uffff\1\145\5\uffff\1\60\1\uffff";
+		"\1\11\1\uffff\1\162\1\150\1\157\1\154\1\uffff\1\157\1\146\1\145\1\164"+
+		"\1\157\1\150\7\uffff\1\52\4\uffff\10\75\2\uffff\1\145\1\141\1\156\1\60"+
+		"\1\163\1\162\1\60\2\164\1\162\2\151\24\uffff\1\141\1\162\1\164\1\142\1"+
+		"\uffff\1\145\1\60\1\uffff\1\60\1\165\1\151\1\144\1\154\1\153\1\60\1\151"+
+		"\1\154\1\60\2\uffff\1\162\1\156\1\60\1\145\1\60\1\uffff\1\156\1\145\1"+
+		"\uffff\1\156\1\147\1\uffff\1\60\1\uffff\1\165\3\60\1\uffff\1\145\3\uffff"+
+		"\1\60\1\uffff";
 	static final String DFA11_maxS =
-		"\1\175\1\142\1\uffff\1\162\2\157\1\154\1\uffff\1\157\1\156\1\162\1\145"+
-		"\1\164\1\141\1\157\1\150\7\uffff\1\75\4\uffff\10\75\2\uffff\1\163\1\145"+
-		"\1\141\1\163\1\172\1\163\1\162\1\172\1\164\1\151\1\164\1\141\1\156\1\162"+
-		"\1\156\2\151\24\uffff\1\172\1\141\1\162\1\164\1\172\1\142\1\uffff\1\145"+
-		"\1\172\1\uffff\1\172\1\156\1\165\1\156\1\172\1\154\1\172\1\144\1\154\1"+
-		"\uffff\1\153\1\172\1\151\1\uffff\1\154\1\172\2\uffff\1\164\1\162\1\146"+
-		"\1\uffff\1\156\1\145\1\uffff\1\172\1\145\1\172\1\uffff\1\156\1\145\1\uffff"+
-		"\1\146\1\156\1\172\1\147\1\156\1\uffff\1\172\1\uffff\1\165\3\172\1\uffff"+
-		"\2\172\1\uffff\1\145\5\uffff\1\172\1\uffff";
+		"\1\175\1\uffff\1\162\2\157\1\154\1\uffff\1\157\1\156\1\145\1\164\1\157"+
+		"\1\150\7\uffff\1\75\4\uffff\10\75\2\uffff\1\145\1\141\1\156\1\172\1\163"+
+		"\1\162\1\172\2\164\1\162\2\151\24\uffff\1\141\1\162\1\164\1\142\1\uffff"+
+		"\1\145\1\172\1\uffff\1\172\1\165\1\151\1\144\1\154\1\153\1\172\1\151\1"+
+		"\154\1\172\2\uffff\1\162\1\156\1\172\1\145\1\172\1\uffff\1\156\1\145\1"+
+		"\uffff\1\156\1\147\1\uffff\1\172\1\uffff\1\165\3\172\1\uffff\1\145\3\uffff"+
+		"\1\172\1\uffff";
 	static final String DFA11_acceptS =
-		"\2\uffff\1\2\4\uffff\1\12\10\uffff\1\27\1\30\1\31\1\32\1\33\1\34\1\35"+
-		"\1\uffff\1\40\1\41\1\42\1\43\10\uffff\1\61\1\62\21\uffff\1\36\1\37\1\66"+
-		"\1\47\1\63\1\44\1\64\1\45\1\65\1\46\1\67\1\50\1\52\1\51\1\53\1\60\1\54"+
-		"\1\56\1\55\1\57\6\uffff\1\7\2\uffff\1\14\11\uffff\1\1\3\uffff\1\6\2\uffff"+
-		"\1\13\1\15\3\uffff\1\21\2\uffff\1\24\3\uffff\1\4\2\uffff\1\11\5\uffff"+
-		"\1\25\1\uffff\1\3\4\uffff\1\20\2\uffff\1\26\1\uffff\1\10\1\16\1\17\1\22"+
-		"\1\23\1\uffff\1\5";
+		"\1\uffff\1\1\4\uffff\1\10\6\uffff\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1"+
+		"\uffff\1\31\1\32\1\33\1\34\10\uffff\1\52\1\53\14\uffff\1\27\1\30\1\57"+
+		"\1\40\1\54\1\35\1\55\1\36\1\56\1\37\1\60\1\41\1\43\1\42\1\44\1\51\1\45"+
+		"\1\47\1\46\1\50\4\uffff\1\5\2\uffff\1\12\12\uffff\1\11\1\13\5\uffff\1"+
+		"\3\2\uffff\1\7\2\uffff\1\16\1\uffff\1\2\4\uffff\1\17\1\uffff\1\6\1\14"+
+		"\1\15\1\uffff\1\4";
 	static final String DFA11_specialS =
-		"\u008d\uffff}>";
+		"\160\uffff}>";
 	static final String[] DFA11_transitionS = {
-			"\2\26\1\uffff\2\26\22\uffff\1\26\1\41\1\31\2\uffff\1\37\1\44\1\32\1\20"+
-			"\1\21\1\36\1\34\1\22\1\35\1\uffff\1\27\12\30\1\uffff\1\23\1\43\1\40\1"+
-			"\42\2\uffff\32\33\1\24\1\uffff\1\25\1\uffff\1\33\1\uffff\1\1\1\3\1\4"+
-			"\1\5\1\6\1\10\2\33\1\11\6\33\1\12\1\33\1\13\1\14\1\15\1\33\1\16\1\17"+
-			"\3\33\1\2\1\45\1\7",
+			"\2\23\1\uffff\2\23\22\uffff\1\23\1\36\1\26\2\uffff\1\34\1\41\1\27\1\15"+
+			"\1\16\1\33\1\31\1\17\1\32\1\uffff\1\24\12\25\1\uffff\1\20\1\40\1\35\1"+
+			"\37\2\uffff\32\30\1\21\1\uffff\1\22\1\uffff\1\30\1\uffff\1\30\1\2\1\3"+
+			"\1\4\1\5\1\7\2\30\1\10\10\30\1\11\1\12\2\30\1\13\1\14\3\30\1\1\1\42\1"+
+			"\6",
+			"",
+			"\1\43",
+			"\1\44\6\uffff\1\45",
 			"\1\46",
-			"",
 			"\1\47",
-			"\1\50\6\uffff\1\51",
-			"\1\52",
+			"",
+			"\1\50",
+			"\1\51\7\uffff\1\52",
 			"\1\53",
-			"",
 			"\1\54",
-			"\1\55\7\uffff\1\56",
-			"\1\57",
-			"\1\60",
-			"\1\61\5\uffff\1\62\12\uffff\1\63",
-			"\1\64",
+			"\1\55",
+			"\1\56",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"\1\60\4\uffff\1\57\15\uffff\1\61",
+			"",
+			"",
+			"",
+			"",
+			"\1\63",
 			"\1\65",
-			"\1\66",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"\1\70\4\uffff\1\67\15\uffff\1\71",
-			"",
-			"",
-			"",
-			"",
+			"\1\67",
+			"\1\71",
 			"\1\73",
 			"\1\75",
 			"\1\77",
 			"\1\101",
+			"",
+			"",
 			"\1\103",
+			"\1\104",
 			"\1\105",
-			"\1\107",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\24\30\1\106\5\30",
+			"\1\110",
 			"\1\111",
-			"",
-			"",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
 			"\1\113",
 			"\1\114",
 			"\1\115",
-			"\1\116\4\uffff\1\117",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\24\33\1\120\5\33",
+			"\1\116",
+			"\1\117",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"\1\120",
+			"\1\121",
 			"\1\122",
 			"\1\123",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"\1\125",
-			"\1\126",
+			"",
+			"\1\124",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+			"",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
 			"\1\127",
 			"\1\130",
 			"\1\131",
 			"\1\132",
 			"\1\133",
-			"\1\134",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
 			"\1\135",
+			"\1\136",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
 			"",
 			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"\1\137",
 			"\1\140",
 			"\1\141",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
 			"\1\143",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
 			"",
-			"\1\144",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+			"\1\145",
+			"\1\146",
 			"",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
 			"\1\147",
 			"\1\150",
-			"\1\151",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"\1\153\2\uffff\1\154",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+			"",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+			"",
+			"\1\152",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+			"",
 			"\1\156",
-			"\1\157",
-			"",
-			"\1\160",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"\1\162",
-			"",
-			"\1\163",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"",
-			"",
-			"\1\165",
-			"\1\166",
-			"\1\167",
-			"",
-			"\1\170",
-			"\1\171",
-			"",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"\1\173",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"",
-			"\1\175",
-			"\1\176",
-			"",
-			"\1\177",
-			"\1\u0080",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"\1\u0082",
-			"\1\u0083",
-			"",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"",
-			"\1\u0085",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-			"",
-			"\1\u008b",
 			"",
 			"",
 			"",
-			"",
-			"",
-			"\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+			"\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
 			""
 	};
 
@@ -2281,7 +2042,7 @@ public class CGrammarLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( ABS | BEGIN | BREAK | CHAR | CONTINUE | COS | DO | DOUBLE | ELSE | END | FOR | IF | INT | PRINTF | RETURN | SCANF | SIN | STRING | STRLEN | TAN | VOID | WHILE | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | WS | SL_COMMENT | ML_COMMENT | NUMBER | STR | CHR | IDENT | ADD | SUB | MUL | DIV | MOD | ASSIGN | EQ | NE | ME | LE | MT | LT | NOT | AND | OR | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN );";
+			return "1:1: Tokens : ( BEGIN | BREAK | CHAR | CONTINUE | DO | DOUBLE | ELSE | END | FOR | IF | INT | RETURN | STRING | VOID | WHILE | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | WS | SL_COMMENT | ML_COMMENT | NUMBER | STR | CHR | IDENT | ADD | SUB | MUL | DIV | MOD | ASSIGN | EQ | NE | ME | LE | MT | LT | NOT | AND | OR | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN );";
 		}
 	}
 

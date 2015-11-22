@@ -33,7 +33,6 @@ public class AstNodePrinter
         } catch (UnsupportedEncodingException e) {}
     }
 
-    //DEPRECATED
     private static String getStringSubTree(Tree node, String indent, boolean root) {
         if (node == null)
             return "";
@@ -47,50 +46,20 @@ public class AstNodePrinter
                 result += lastNodeChar + " ";
                 indent += "  ";
             }
-        result += node + "\n";
+        result += node.toString() + "\n";
         for(int i = 0; i < node.getChildCount(); i++)
             result += getStringSubTree(node.getChild(i), indent, false);
         
         return result;
     }
-    
-    private static void printSubTree(Tree node, PrintWriter pw) {
-        for(int i = 0; i < node.getChildCount(); i++)
-            {
-                pw.println("node"+System.identityHashCode(node.getChild(i))+" [label=\""+node.getChild(i).toString() + "\" shape=box];");
-                pw.println("node"+System.identityHashCode(node) + " -> node"+ System.identityHashCode(node.getChild(i))+";");
-                printSubTree(node.getChild(i), pw);
-            }
-    } 
-    
-    public static void printToDot(Tree node) {
-        try {
-            PrintWriter pw = new PrintWriter("ast.dot", "UTF-8");
-            pw.println("digraph G {");
-            String label = node.toString();
-            if (node.toString().contains("\""))
-                label = node.toString().replaceAll("\"", "*");
-            pw.println("node"+System.identityHashCode(node)+" [label=\""+ label + "\"];");
-            printSubTree(node, pw);
-            pw.println("}");
-            pw.close();
-        } catch (Exception ex) {
-            Logger.getLogger(AstNodePrinter.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-    }
-    
-    //DEPRECATED
+
     public static String astNodeToAdvancedDosStringTree(Tree node) {
         return getStringSubTree(node, "", true);
     }
 
-
     public static void print(Tree node) {
-        
         String tree = astNodeToAdvancedDosStringTree(node);
         System.out.println(tree);
-        printToDot(node);
     }
 }
 

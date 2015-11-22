@@ -39,7 +39,7 @@ public class Context {
     
     public Ident getFunction(){
         return (Ident)(function != null ? function : 
-                parentContext != null ? parentContext : null);
+                parentContext != null ? parentContext.getFunction() : null);
     }
     
     public void setFunction(Ident value){

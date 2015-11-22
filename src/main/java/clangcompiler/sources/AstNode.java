@@ -14,13 +14,17 @@ import org.antlr.runtime.tree.CommonTree;
  */
 public class AstNode extends CommonTree{
     
-    private DataType dataType;
+    private DataType dataType = DataType.Void;
     
     public AstNode() {
         super();
     }
     
     public AstNode(CommonTree node) {
+        super(node);
+    }
+    
+    public AstNode(AstNode node) {
         super(node);
     }
     

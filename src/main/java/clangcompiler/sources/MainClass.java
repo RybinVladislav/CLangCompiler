@@ -13,14 +13,14 @@ import org.antlr.runtime.tree.*;
  */
 public class MainClass {
     
-    public static AstNode check(String src, Context context) throws RecognitionException, Exception
+    public static Tree check(String src, Context context) throws RecognitionException, Exception
     {
         CharStream input = new ANTLRStringStream(src);
         CGrammarLexer lexer = new CGrammarLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         CGrammarParser parser = new CGrammarParser(tokens);
         parser.setTreeAdaptor(new AstNodeTreeAdapter());
-        AstNode program = (AstNode)parser.execute().getTree();
+        Tree program = (AstNode)parser.execute().getTree();
         SemanticChecker.check((AstNode)program, context);
         return program;
     }
@@ -29,12 +29,12 @@ public class MainClass {
         String filepath = "./Input.txt";
         try {
             Context context = new Context(null);
-            String src = "void printInt(int a) { }" +
-                        "void printDouble(double a) { }" +
-                        "double sqrt(double a) { }" +
-                        "double sqr(double a) { }" +
-                        "int readInt() { }" +
-                        "double readDouble() { }";
+            String src = "void printInt(int a) { } " +
+                        "void printDouble(double a) { } " +
+                        "double sqrt(double a) { } " +
+                        "double sqr(double a) { } " +
+                        "int readInt() { } " +
+                        "double readDouble() { } ";
             check(src, context);
             
             CharStream input = (CharStream) new ANTLRFileStream(filepath);
@@ -42,7 +42,7 @@ public class MainClass {
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             CGrammarParser parser = new CGrammarParser(tokens);
             parser.setTreeAdaptor(new AstNodeTreeAdapter());
-            Tree program = (Tree) parser.execute().getTree();
+            AstNode program = (AstNode) parser.execute().getTree();
             AstNodePrinter.print(program);
             System.out.println();
             SemanticChecker.check((AstNode) program, context);

@@ -15,7 +15,7 @@ public class Ident {
     private String name;
     private IdentType identType;
     private DataType dataType;
-    private AstNode node;
+    private CommonTree node;
     private int id;
 
     public String getName() {
@@ -42,11 +42,11 @@ public class Ident {
         this.dataType = dataType;
     }
     
-    public AstNode getNode() {
+    public CommonTree getNode() {
         return this.node;
     }
     
-    public void setNode(AstNode node) {
+    public void setNode(CommonTree node) {
         this.node = node;
     }
     
@@ -58,7 +58,7 @@ public class Ident {
         this.id = id;
     }
     
-    public Ident(String name, IdentType identType, DataType dataType, AstNode node)
+    public Ident(String name, IdentType identType, DataType dataType, CommonTree node)
     {
         this.name = name;
         this.identType = identType;

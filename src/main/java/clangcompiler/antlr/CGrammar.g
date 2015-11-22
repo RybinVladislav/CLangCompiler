@@ -40,15 +40,6 @@ tokens {
   
   FUNCCALL;
   
-  SIN	   = 'sin'	;
-  COS	   = 'cos'	;
-  TAN	   = 'tan'	;
-  ABS      = 'abs'	;
-  STRLEN   = 'strlen'	;
-  
-  PRINTF   = 'printf'   ;
-  SCANF    = 'scanf'    ;
-  
   ARRAY			;
   ARRAYCALL		;
 
@@ -179,25 +170,11 @@ do_while:	DO expr WHILE '(' or_logic ')' -> ^(DOWHILE expr or_logic);
 
 return_expr
 	:	RETURN^ term?;
-	
-print_expr
-	:	PRINTF '(' STR ( ',' term )* ')' 
-		-> ^(PRINTF ^( STR term* ) )
-	;
-	
-scan_args:	IDENT | array_call;
-	
-scan_expr
-	:	SCANF '(' STR ( ',' scan_args )* ')' 
-		-> ^(SCANF ^( STR scan_args* ) )
-	;
 
 sexpr	:	var_expr
 		| BREAK
 		| CONTINUE
 		| return_expr
-		| print_expr
-		| scan_expr
 		| func_call
 		| (array_call | IDENT) assign^ term
                 | IDENT ASSIGN^ BEGIN! term (','! term)* END!
@@ -226,8 +203,7 @@ function:	type IDENT '(' function_var? ')' BEGIN expr* END
 		-> ^(FUNC type IDENT ^(PARAMS function_var?) ^(BLOCK expr*)) ;		
 		
 func_name
-	:	IDENT 
-		| SIN | COS | TAN | ABS | STRLEN ;
+	:	IDENT ;
 		
 func_call 
 	:	func_name '(' params_ ')' -> ^(FUNCCALL func_name params_);
@@ -236,8 +212,8 @@ params_	:	( term ( ',' term  )* )? -> ^( PARAMS term* );
 
 program	:	(var_expr (';'!)+)* function*;
 
-result	:	program EOF -> ^(PROGRAM program);
+result	:	program -> ^(PROGRAM program);
 
-public execute
+execute
 	:	result
 ;
