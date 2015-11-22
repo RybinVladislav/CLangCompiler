@@ -29,12 +29,11 @@ public class MainClass {
         String filepath = "./Input.txt";
         try {
             Context context = new Context(null);
-            String src = "void printInt(int a) { } " +
-                        "void printDouble(double a) { } " +
+            String src = 
+                        "double sin(double a) { } " +
+                        "double cos(double a) { } " +
                         "double sqrt(double a) { } " +
-                        "double sqr(double a) { } " +
-                        "int readInt() { } " +
-                        "double readDouble() { } ";
+                        "double sqr(double a) { } ";
             check(src, context);
             
             CharStream input = (CharStream) new ANTLRFileStream(filepath);

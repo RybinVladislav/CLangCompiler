@@ -114,9 +114,71 @@ public class SemanticChecker {
                         
                     } else
                         if (t.getToken().getType() == CGrammarLexer.ARRAY) { // если объявляется массив
-                            
-                            // TODO !!!
-                            
+                            if (t.getChildCount() == 2) { //если задано количество
+                                Ident ident = context.inThisContext(t.getChild(1).getText());
+                                if (ident != null)
+                                    throw new Exception(String.format("Identifier %s already exists", t.getText()));
+                                if (check((AstNode)t.getChild(0), context) != DataType.Int)
+                                    throw new Exception(String.format("Identifier %s has illegal count of elements", t.getText()));
+                                
+                                AstNode var = new AstNode(new CommonToken(CGrammarLexer.VARDECL, "VARDECL"));
+                                var.addChild(new AstNode(new CommonToken(CGrammarLexer.IDENT, dataTypeToStr(dataType))));
+                                var.getChild(0).addChild(new AstNode(new CommonToken(CGrammarLexer.ARRAY, "ARRAY")));
+                                var.getChild(0).getChild(0).addChild(t.getChild(0));
+                                var.getChild(0).getChild(0).addChild(new AstNode(new CommonToken(CGrammarLexer.IDENT, t.getChild(1).getText())));
+                                
+                                nodes.add(var);
+                                
+                                if (t.getChild(1).getChildCount() != 0) { //если есть присвоение
+                                    CommonTree arr = (CommonTree)t.getChild(1).getChild(0);
+                                    for (int j = 0; j < arr.getChildCount(); j++) {
+                                        AstNode assign = new AstNode(new CommonToken(CGrammarLexer.ASSIGN, "="));
+                                        assign.addChild(new AstNode(new CommonToken(CGrammarLexer.ARRAYCALL, "ARRAYCALL")));
+                                        assign.getChild(0).addChild(new AstNode(new CommonToken(CGrammarLexer.IDENT, t.getChild(1).getText())));
+                                        assign.getChild(0).addChild(new AstNode(new CommonToken(CGrammarLexer.NUMBER, Integer.toString(j))));
+                                        assign.addChild((AstNode)arr.getChild(j));
+                                        nodes.add(assign);
+                                    }
+                                }
+                                
+                                if (i == 0) {
+                                    String name = t.getChild(1).getText();
+                                    Ident idnt = new Ident(name, context.getParentContext() == null ? IdentType.GlobalVar : IdentType.LocalVar, dataType, nodes.get(0));
+                                    idnt.setAsArray();
+                                    context.setIdent(idnt, name);
+                                }
+                            } else { //не задано количество, но обязательно должно быть присваивание
+                                Ident ident = context.inThisContext(t.getChild(0).getText());
+                                if (ident != null)
+                                    throw new Exception(String.format("Identifier %s already exists", t.getText()));
+                                if (t.getChild(0).getChildCount() == 0)
+                                    throw new Exception(String.format("Illegal declaration of Identifier %s", t.getText()));
+                                int count = t.getChild(0).getChild(0).getChildCount();
+                                AstNode var = new AstNode(new CommonToken(CGrammarLexer.VARDECL, "VARDECL"));
+                                var.addChild(new AstNode(new CommonToken(CGrammarLexer.IDENT, dataTypeToStr(dataType))));
+                                var.getChild(0).addChild(new AstNode(new CommonToken(CGrammarLexer.ARRAY, "ARRAY")));
+                                var.getChild(0).getChild(0).addChild(new AstNode(new CommonToken(CGrammarLexer.NUMBER, Integer.toString(count))));
+                                var.getChild(0).getChild(0).addChild(new AstNode(new CommonToken(CGrammarLexer.IDENT, t.getChild(0).getText())));
+                                
+                                nodes.add(var);
+
+                                CommonTree arr = (CommonTree)t.getChild(0).getChild(0);
+                                for (int j = 0; j < arr.getChildCount(); j++) {
+                                    AstNode assign = new AstNode(new CommonToken(CGrammarLexer.ASSIGN, "="));
+                                    assign.addChild(new AstNode(new CommonToken(CGrammarLexer.ARRAYCALL, "ARRAYCALL")));
+                                    assign.getChild(0).addChild(new AstNode(new CommonToken(CGrammarLexer.IDENT, t.getChild(0).getText())));
+                                    assign.getChild(0).addChild(new AstNode(new CommonToken(CGrammarLexer.NUMBER, Integer.toString(j))));
+                                    assign.addChild((AstNode)arr.getChild(j));
+                                    nodes.add(assign);
+                                }
+                                
+                                if (i == 0) {
+                                    String name = t.getChild(0).getText();
+                                    Ident idnt = new Ident(name, context.getParentContext() == null ? IdentType.GlobalVar : IdentType.LocalVar, dataType, nodes.get(0));
+                                    idnt.setAsArray();
+                                    context.setIdent(idnt, name);
+                                }
+                            }
                         }
                 }
                 
@@ -126,6 +188,18 @@ public class SemanticChecker {
                 node.getParent().replaceChildren(node.getChildIndex(), node.getChildIndex(), tree);
                 
                 return DataType.Void;
+            }
+            
+            case CGrammarLexer.ARRAYCALL: {
+                Ident ident = context.getIdent(node.getChild(0).getText());
+                if (ident == null)
+                    throw new Exception(String.format("Unknown identifier %s", node.getChild(0).getText()));
+                if (!ident.isArray())
+                    throw new Exception(String.format("Identifier %s should be array", node.getChild(0).getText()));
+                if (check((AstNode)node.getChild(1), context) != DataType.Int)
+                    throw new Exception(String.format("Number of calling element in array %s should be of int", node.getChild(0).getText()));
+                node.setDataType(ident.getDataType());
+                return ident.getDataType();
             }
 
             case CGrammarLexer.FUNC: //объявление функций
@@ -148,13 +222,18 @@ public class SemanticChecker {
                         paramName = t.getText();
                     } else 
                         if (t.getType() == CGrammarLexer.ARRAY) { //если параметр - массив
-                            // TODO !!!
+                            paramName = t.getChild(0).getText();
+                            if (check((AstNode)t.getChild(1), context) != DataType.Int)
+                                throw new Exception(String.format("In function %s illegal array param", name));
                         }
                     if (paramDataType == DataType.Void)
                         throw new Exception(String.format("In function %s void param %s", name, paramName));
                     if (paramName == null)
                         throw new Exception(String.format("In function %s illegal param", name));
-                    context.setIdent(new Ident(paramName, IdentType.Param, paramDataType, (CommonTree)params.getChild(i)), paramName);
+                    Ident idnt = new Ident(paramName, IdentType.Param, paramDataType, (CommonTree)params.getChild(i));
+                    if (t.getType() == CGrammarLexer.ARRAY) 
+                        idnt.setAsArray();
+                    context.setIdent(idnt, paramName);
                 }
                 context.setFunction(func);
                 check((AstNode) node.getChild(3), context);
@@ -234,20 +313,35 @@ public class SemanticChecker {
             case CGrammarLexer.MOD_ASSIGN:
             case CGrammarLexer.ASSIGN:
             {
-                Ident ident = context.getIdent(node.getChild(0).getText());
-                if (ident == null)
-                    throw new Exception(String.format("Unknown identifier %s", node.getChild(0).getText()));
-                if (ident.getIdentType() == IdentType.Function)
-                    throw new Exception(String.format("Assign to function %s", node.getChild(0).getText()));
-                DataType rightDataType = check((AstNode) node.getChild(1), context);
-                if (ident.getDataType() != rightDataType)
-                {
-                    if (ident.getDataType() == DataType.Double && rightDataType == DataType.Int)
-                        convert((AstNode) node.getChild(1), DataType.Double);
-                    else
-                        throw new Exception(String.format("incompatible types %s %s", dataTypeToStr(ident.getDataType()), dataTypeToStr(rightDataType)));
-                }
-                return DataType.Void;
+                if (node.getChild(0).getType() == CGrammarLexer.IDENT) {
+                    Ident ident = context.getIdent(node.getChild(0).getText());
+                    if (ident == null)
+                        throw new Exception(String.format("Unknown identifier %s", node.getChild(0).getText()));
+                    if (ident.getIdentType() == IdentType.Function)
+                        throw new Exception(String.format("Assign to function %s", node.getChild(0).getText()));
+                
+                    DataType rightDataType = check((AstNode) node.getChild(1), context);
+                    if (ident.getDataType() != rightDataType)
+                    {
+                        if (ident.getDataType() == DataType.Double && rightDataType == DataType.Int)
+                            convert((AstNode) node.getChild(1), DataType.Double);
+                        else
+                            throw new Exception(String.format("incompatible types %s %s", dataTypeToStr(ident.getDataType()), dataTypeToStr(rightDataType)));
+                    }
+                    return DataType.Void;
+                } else
+                    if (node.getChild(0).getType() == CGrammarLexer.ARRAYCALL) {
+                        DataType leftDataType = check((AstNode) node.getChild(0), context);
+                        DataType rightDataType = check((AstNode) node.getChild(1), context);
+                        if (leftDataType != rightDataType)
+                        {
+                            if (leftDataType == DataType.Double && rightDataType == DataType.Int)
+                                convert((AstNode) node.getChild(1), DataType.Double);
+                            else
+                                throw new Exception(String.format("incompatible types %s %s", dataTypeToStr(leftDataType), dataTypeToStr(rightDataType)));
+                        }
+                        return DataType.Void;
+                    }
             }
 
             case CGrammarLexer.RETURN:
@@ -291,26 +385,33 @@ public class SemanticChecker {
 
                 DataType leftDataType = check((AstNode) node.getChild(0), context);
                 DataType rightDataType = check((AstNode) node.getChild(1), context);
-                if (leftDataType != DataType.Double && leftDataType != DataType.Int)
-                    throw new Exception(String.format("Left operand invalid type for operation %s, line = %d, pos = %d", node.getText(), node.getLine(), node.getTokenStartIndex()));
-                if (rightDataType != DataType.Double && rightDataType != DataType.Int)
-                    throw new Exception(String.format("Right operand invalid type for operation %s, line = %d, pos = %d", node.getText(), node.getLine(), node.getTokenStartIndex()));
-                if (leftDataType == DataType.Double)
-                {
-                    if (rightDataType == DataType.Int)
-                        convert((AstNode)node.getChild(1), DataType.Double);
-                    node.setDataType(compareOperation ? DataType.Int : DataType.Double);
+                if (node.getType() == CGrammarLexer.EQ) {
+                    if (leftDataType != rightDataType)
+                        throw new Exception(String.format("Invalid types for operation %s, line = %d, pos = %d", node.getText(), node.getLine(), node.getTokenStartIndex()));
+                    node.setDataType(DataType.Int);
+                    return node.getDataType();
+                } else {
+                    if (leftDataType != DataType.Double && leftDataType != DataType.Int)
+                        throw new Exception(String.format("Left operand invalid type for operation %s, line = %d, pos = %d", node.getText(), node.getLine(), node.getTokenStartIndex()));
+                    if (rightDataType != DataType.Double && rightDataType != DataType.Int)
+                        throw new Exception(String.format("Right operand invalid type for operation %s, line = %d, pos = %d", node.getText(), node.getLine(), node.getTokenStartIndex()));
+                    if (leftDataType == DataType.Double)
+                    {
+                        if (rightDataType == DataType.Int)
+                            convert((AstNode)node.getChild(1), DataType.Double);
+                        node.setDataType(compareOperation ? DataType.Int : DataType.Double);
+                        return node.getDataType();
+                    }
+                    if (rightDataType == DataType.Double)
+                    {
+                        if (leftDataType == DataType.Int)
+                            convert((AstNode)node.getChild(0), DataType.Double);
+                        node.setDataType(compareOperation ? DataType.Int : DataType.Double);
+                        return node.getDataType();
+                    }
+                    node.setDataType(DataType.Int);
                     return node.getDataType();
                 }
-                if (rightDataType == DataType.Double)
-                {
-                    if (leftDataType == DataType.Int)
-                        convert((AstNode)node.getChild(0), DataType.Double);
-                    node.setDataType(compareOperation ? DataType.Int : DataType.Double);
-                    return node.getDataType();
-                }
-                node.setDataType(DataType.Int);
-                return node.getDataType();
             }
 
             case CGrammarLexer.NOT:

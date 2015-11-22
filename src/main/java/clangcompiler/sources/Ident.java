@@ -17,6 +17,8 @@ public class Ident {
     private DataType dataType;
     private CommonTree node;
     private int id;
+    
+    private boolean array;
 
     public String getName() {
         return name;
@@ -24,6 +26,14 @@ public class Ident {
 
     public void setName(String name) {
         this.name = name;
+    }
+    
+    public void setAsArray() {
+        array = true;
+    }
+    
+    public boolean isArray() {
+        return array;
     }
 
     public IdentType getIdentType() {
@@ -64,5 +74,7 @@ public class Ident {
         this.identType = identType;
         this.dataType = dataType;
         this.node = node;
+        this.array = false;
+        this.id = -1;
     }
 }

@@ -42,6 +42,7 @@ tokens {
   
   ARRAY			;
   ARRAYCALL		;
+  ARRAYINIT             ;
 
   VARDECL               ;
 }
@@ -143,12 +144,12 @@ simple_var
 
 array_var1
 	:	IDENT '[' term ']' (ASSIGN BEGIN term (',' term)* END)?
-                 -> ^(ARRAY IDENT term*);
+                 -> ^( ARRAY term ^( IDENT ^( ARRAYINIT term* )? ) );
 
 
 array_var2
 	:	IDENT '[' ']' (ASSIGN BEGIN term (',' term)* END)?
-                 -> ^(ARRAY IDENT term*);
+                 -> ^( ARRAY ^( IDENT ^( ARRAYINIT term* ) ) );
 
 array_var:      array_var1 | array_var2;
 	

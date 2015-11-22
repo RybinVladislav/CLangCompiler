@@ -1,0 +1,12 @@
+int i = 0, j = 5;
+char c = 'a';
+
+int main(int a, char chr) {
+	double s = sqrt(a);
+	char arrc[5]  = { 'h', 'e', 'l', 'l', 'o'}, chr[10], carr[] = {'a', 'b', 'c'};
+        int k = 10;
+        k += (i * j) / 2;
+        double d = 1.0;
+        d /= 2 * i;
+	return 0;
+}

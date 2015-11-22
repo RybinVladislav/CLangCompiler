@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g 2015-11-22 15:20:41
+// $ANTLR 3.5.2 D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g 2015-11-22 15:41:29
 package clangcompiler.antlr; 
 
 import org.antlr.runtime.*;
@@ -9,65 +9,66 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class CGrammarLexer extends Lexer {
 	public static final int EOF=-1;
-	public static final int T__57=57;
 	public static final int T__58=58;
 	public static final int T__59=59;
 	public static final int T__60=60;
 	public static final int T__61=61;
 	public static final int T__62=62;
+	public static final int T__63=63;
 	public static final int ADD=4;
 	public static final int ADD_ASSIGN=5;
 	public static final int AND=6;
 	public static final int ARRAY=7;
 	public static final int ARRAYCALL=8;
-	public static final int ASSIGN=9;
-	public static final int BEGIN=10;
-	public static final int BLOCK=11;
-	public static final int BREAK=12;
-	public static final int CHAR=13;
-	public static final int CHR=14;
-	public static final int CONTINUE=15;
-	public static final int DECLARE=16;
-	public static final int DIV=17;
-	public static final int DIV_ASSIGN=18;
-	public static final int DO=19;
-	public static final int DOUBLE=20;
-	public static final int DOWHILE=21;
-	public static final int ELSE=22;
-	public static final int END=23;
-	public static final int EQ=24;
-	public static final int FOR=25;
-	public static final int FUNC=26;
-	public static final int FUNCCALL=27;
-	public static final int IDENT=28;
-	public static final int IF=29;
-	public static final int INT=30;
-	public static final int LE=31;
-	public static final int LT=32;
-	public static final int ME=33;
-	public static final int ML_COMMENT=34;
-	public static final int MOD=35;
-	public static final int MOD_ASSIGN=36;
-	public static final int MT=37;
-	public static final int MUL=38;
-	public static final int MUL_ASSIGN=39;
-	public static final int NE=40;
-	public static final int NOT=41;
-	public static final int NUMBER=42;
-	public static final int OR=43;
-	public static final int PARAMS=44;
-	public static final int PROGRAM=45;
-	public static final int RETURN=46;
-	public static final int SL_COMMENT=47;
-	public static final int STR=48;
-	public static final int STRING=49;
-	public static final int SUB=50;
-	public static final int SUB_ASSIGN=51;
-	public static final int UNKNOWN=52;
-	public static final int VARDECL=53;
-	public static final int VOID=54;
-	public static final int WHILE=55;
-	public static final int WS=56;
+	public static final int ARRAYINIT=9;
+	public static final int ASSIGN=10;
+	public static final int BEGIN=11;
+	public static final int BLOCK=12;
+	public static final int BREAK=13;
+	public static final int CHAR=14;
+	public static final int CHR=15;
+	public static final int CONTINUE=16;
+	public static final int DECLARE=17;
+	public static final int DIV=18;
+	public static final int DIV_ASSIGN=19;
+	public static final int DO=20;
+	public static final int DOUBLE=21;
+	public static final int DOWHILE=22;
+	public static final int ELSE=23;
+	public static final int END=24;
+	public static final int EQ=25;
+	public static final int FOR=26;
+	public static final int FUNC=27;
+	public static final int FUNCCALL=28;
+	public static final int IDENT=29;
+	public static final int IF=30;
+	public static final int INT=31;
+	public static final int LE=32;
+	public static final int LT=33;
+	public static final int ME=34;
+	public static final int ML_COMMENT=35;
+	public static final int MOD=36;
+	public static final int MOD_ASSIGN=37;
+	public static final int MT=38;
+	public static final int MUL=39;
+	public static final int MUL_ASSIGN=40;
+	public static final int NE=41;
+	public static final int NOT=42;
+	public static final int NUMBER=43;
+	public static final int OR=44;
+	public static final int PARAMS=45;
+	public static final int PROGRAM=46;
+	public static final int RETURN=47;
+	public static final int SL_COMMENT=48;
+	public static final int STR=49;
+	public static final int STRING=50;
+	public static final int SUB=51;
+	public static final int SUB_ASSIGN=52;
+	public static final int UNKNOWN=53;
+	public static final int VARDECL=54;
+	public static final int VOID=55;
+	public static final int WHILE=56;
+	public static final int WS=57;
 
 	// delegates
 	// delegators
@@ -397,35 +398,15 @@ public class CGrammarLexer extends Lexer {
 	}
 	// $ANTLR end "WHILE"
 
-	// $ANTLR start "T__57"
-	public final void mT__57() throws RecognitionException {
-		try {
-			int _type = T__57;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:24:7: ( '(' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:24:9: '('
-			{
-			match('('); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__57"
-
 	// $ANTLR start "T__58"
 	public final void mT__58() throws RecognitionException {
 		try {
 			int _type = T__58;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:25:7: ( ')' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:25:9: ')'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:24:7: ( '(' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:24:9: '('
 			{
-			match(')'); 
+			match('('); 
 			}
 
 			state.type = _type;
@@ -442,10 +423,10 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = T__59;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:26:7: ( ',' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:26:9: ','
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:25:7: ( ')' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:25:9: ')'
 			{
-			match(','); 
+			match(')'); 
 			}
 
 			state.type = _type;
@@ -462,10 +443,10 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = T__60;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:27:7: ( ';' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:27:9: ';'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:26:7: ( ',' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:26:9: ','
 			{
-			match(';'); 
+			match(','); 
 			}
 
 			state.type = _type;
@@ -482,10 +463,10 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = T__61;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:28:7: ( '[' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:28:9: '['
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:27:7: ( ';' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:27:9: ';'
 			{
-			match('['); 
+			match(';'); 
 			}
 
 			state.type = _type;
@@ -502,6 +483,26 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = T__62;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:28:7: ( '[' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:28:9: '['
+			{
+			match('['); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__62"
+
+	// $ANTLR start "T__63"
+	public final void mT__63() throws RecognitionException {
+		try {
+			int _type = T__63;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
 			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:29:7: ( ']' )
 			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:29:9: ']'
 			{
@@ -515,17 +516,17 @@ public class CGrammarLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__62"
+	// $ANTLR end "T__63"
 
 	// $ANTLR start "WS"
 	public final void mWS() throws RecognitionException {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:54:3: ( ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+ )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:55:3: ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:55:3: ( ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+ )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:56:3: ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+
 			{
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:55:3: ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:56:3: ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -577,12 +578,12 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = SL_COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:60:11: ( '//' ( options {greedy=false; } : . )* ( '\\r' )? '\\n' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:61:3: '//' ( options {greedy=false; } : . )* ( '\\r' )? '\\n'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:61:11: ( '//' ( options {greedy=false; } : . )* ( '\\r' )? '\\n' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:62:3: '//' ( options {greedy=false; } : . )* ( '\\r' )? '\\n'
 			{
 			match("//"); 
 
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:61:8: ( options {greedy=false; } : . )*
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:62:8: ( options {greedy=false; } : . )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -599,7 +600,7 @@ public class CGrammarLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:61:36: .
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:62:36: .
 					{
 					matchAny(); 
 					}
@@ -610,7 +611,7 @@ public class CGrammarLexer extends Lexer {
 				}
 			}
 
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:61:40: ( '\\r' )?
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:62:40: ( '\\r' )?
 			int alt3=2;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0=='\r') ) {
@@ -618,7 +619,7 @@ public class CGrammarLexer extends Lexer {
 			}
 			switch (alt3) {
 				case 1 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:61:40: '\\r'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:62:40: '\\r'
 					{
 					match('\r'); 
 					}
@@ -646,12 +647,12 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = ML_COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:65:11: ( '/*' ( options {greedy=false; } : . )* '*/' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:66:3: '/*' ( options {greedy=false; } : . )* '*/'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:66:11: ( '/*' ( options {greedy=false; } : . )* '*/' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:67:3: '/*' ( options {greedy=false; } : . )* '*/'
 			{
 			match("/*"); 
 
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:66:8: ( options {greedy=false; } : . )*
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:67:8: ( options {greedy=false; } : . )*
 			loop4:
 			while (true) {
 				int alt4=2;
@@ -672,7 +673,7 @@ public class CGrammarLexer extends Lexer {
 
 				switch (alt4) {
 				case 1 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:66:36: .
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:67:36: .
 					{
 					matchAny(); 
 					}
@@ -704,10 +705,10 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = NUMBER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:71:8: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:71:11: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:72:8: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:72:11: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
 			{
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:71:11: ( '0' .. '9' )+
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:72:11: ( '0' .. '9' )+
 			int cnt5=0;
 			loop5:
 			while (true) {
@@ -740,7 +741,7 @@ public class CGrammarLexer extends Lexer {
 				cnt5++;
 			}
 
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:71:23: ( '.' ( '0' .. '9' )+ )?
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:72:23: ( '.' ( '0' .. '9' )+ )?
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0=='.') ) {
@@ -748,10 +749,10 @@ public class CGrammarLexer extends Lexer {
 			}
 			switch (alt7) {
 				case 1 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:71:24: '.' ( '0' .. '9' )+
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:72:24: '.' ( '0' .. '9' )+
 					{
 					match('.'); 
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:71:28: ( '0' .. '9' )+
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:72:28: ( '0' .. '9' )+
 					int cnt6=0;
 					loop6:
 					while (true) {
@@ -805,11 +806,11 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = STR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:74:5: ( '\"' ( . )* '\"' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:74:7: '\"' ( . )* '\"'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:75:5: ( '\"' ( . )* '\"' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:75:7: '\"' ( . )* '\"'
 			{
 			match('\"'); 
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:74:11: ( . )*
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:75:11: ( . )*
 			loop8:
 			while (true) {
 				int alt8=2;
@@ -823,7 +824,7 @@ public class CGrammarLexer extends Lexer {
 
 				switch (alt8) {
 				case 1 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:74:12: .
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:75:12: .
 					{
 					matchAny(); 
 					}
@@ -851,11 +852,11 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = CHR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:5: ( '\\'' ( . | '\\\\n' | '\\\\0' | '\\\\t' | '\\\\f' | '\\\\a' | '\\\\v' | '\\\\b' | '\\\\r' | '\\\\\\\\' | '\\\\\\'' | '\\\\\\\"' ) '\\'' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:7: '\\'' ( . | '\\\\n' | '\\\\0' | '\\\\t' | '\\\\f' | '\\\\a' | '\\\\v' | '\\\\b' | '\\\\r' | '\\\\\\\\' | '\\\\\\'' | '\\\\\\\"' ) '\\''
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:5: ( '\\'' ( . | '\\\\n' | '\\\\0' | '\\\\t' | '\\\\f' | '\\\\a' | '\\\\v' | '\\\\b' | '\\\\r' | '\\\\\\\\' | '\\\\\\'' | '\\\\\\\"' ) '\\'' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:7: '\\'' ( . | '\\\\n' | '\\\\0' | '\\\\t' | '\\\\f' | '\\\\a' | '\\\\v' | '\\\\b' | '\\\\r' | '\\\\\\\\' | '\\\\\\'' | '\\\\\\\"' ) '\\''
 			{
 			match('\''); 
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:12: ( . | '\\\\n' | '\\\\0' | '\\\\t' | '\\\\f' | '\\\\a' | '\\\\v' | '\\\\b' | '\\\\r' | '\\\\\\\\' | '\\\\\\'' | '\\\\\\\"' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:12: ( . | '\\\\n' | '\\\\0' | '\\\\t' | '\\\\f' | '\\\\a' | '\\\\v' | '\\\\b' | '\\\\r' | '\\\\\\\\' | '\\\\\\'' | '\\\\\\\"' )
 			int alt9=12;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0=='\\') ) {
@@ -947,83 +948,83 @@ public class CGrammarLexer extends Lexer {
 
 			switch (alt9) {
 				case 1 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:13: .
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:13: .
 					{
 					matchAny(); 
 					}
 					break;
 				case 2 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:17: '\\\\n'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:17: '\\\\n'
 					{
 					match("\\n"); 
 
 					}
 					break;
 				case 3 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:25: '\\\\0'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:25: '\\\\0'
 					{
 					match("\\0"); 
 
 					}
 					break;
 				case 4 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:33: '\\\\t'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:33: '\\\\t'
 					{
 					match("\\t"); 
 
 					}
 					break;
 				case 5 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:41: '\\\\f'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:41: '\\\\f'
 					{
 					match("\\f"); 
 
 					}
 					break;
 				case 6 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:49: '\\\\a'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:49: '\\\\a'
 					{
 					match("\\a"); 
 
 					}
 					break;
 				case 7 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:57: '\\\\v'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:57: '\\\\v'
 					{
 					match("\\v"); 
 
 					}
 					break;
 				case 8 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:65: '\\\\b'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:65: '\\\\b'
 					{
 					match("\\b"); 
 
 					}
 					break;
 				case 9 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:73: '\\\\r'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:73: '\\\\r'
 					{
 					match("\\r"); 
 
 					}
 					break;
 				case 10 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:81: '\\\\\\\\'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:81: '\\\\\\\\'
 					{
 					match("\\\\"); 
 
 					}
 					break;
 				case 11 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:90: '\\\\\\''
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:90: '\\\\\\''
 					{
 					match("\\'"); 
 
 					}
 					break;
 				case 12 :
-					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:76:99: '\\\\\\\"'
+					// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:77:99: '\\\\\\\"'
 					{
 					match("\\\""); 
 
@@ -1049,8 +1050,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = IDENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:78:7: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:78:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:79:7: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:79:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -1060,7 +1061,7 @@ public class CGrammarLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:79:10: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:80:10: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
 			loop10:
 			while (true) {
 				int alt10=2;
@@ -1105,8 +1106,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = ADD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:82:5: ( '+' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:82:7: '+'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:83:5: ( '+' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:83:7: '+'
 			{
 			match('+'); 
 			}
@@ -1125,8 +1126,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = SUB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:83:5: ( '-' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:83:7: '-'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:84:5: ( '-' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:84:7: '-'
 			{
 			match('-'); 
 			}
@@ -1145,8 +1146,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = MUL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:84:5: ( '*' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:84:7: '*'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:5: ( '*' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:7: '*'
 			{
 			match('*'); 
 			}
@@ -1165,8 +1166,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = DIV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:5: ( '/' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:85:7: '/'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:86:5: ( '/' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:86:7: '/'
 			{
 			match('/'); 
 			}
@@ -1185,8 +1186,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = MOD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:86:5: ( '%' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:86:7: '%'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:87:5: ( '%' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:87:7: '%'
 			{
 			match('%'); 
 			}
@@ -1205,8 +1206,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:88:8: ( '=' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:88:10: '='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:89:8: ( '=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:89:10: '='
 			{
 			match('='); 
 			}
@@ -1225,8 +1226,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = EQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:90:4: ( '==' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:90:6: '=='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:91:4: ( '==' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:91:6: '=='
 			{
 			match("=="); 
 
@@ -1246,8 +1247,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = NE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:91:4: ( '!=' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:91:6: '!='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:92:4: ( '!=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:92:6: '!='
 			{
 			match("!="); 
 
@@ -1267,8 +1268,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = ME;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:92:4: ( '>=' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:92:6: '>='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:93:4: ( '>=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:93:6: '>='
 			{
 			match(">="); 
 
@@ -1288,8 +1289,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = LE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:93:4: ( '<=' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:93:6: '<='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:94:4: ( '<=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:94:6: '<='
 			{
 			match("<="); 
 
@@ -1309,8 +1310,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = MT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:94:4: ( '>' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:94:6: '>'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:95:4: ( '>' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:95:6: '>'
 			{
 			match('>'); 
 			}
@@ -1329,8 +1330,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = LT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:95:4: ( '<' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:95:6: '<'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:96:4: ( '<' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:96:6: '<'
 			{
 			match('<'); 
 			}
@@ -1349,8 +1350,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = NOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:97:5: ( '!' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:97:7: '!'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:98:5: ( '!' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:98:7: '!'
 			{
 			match('!'); 
 			}
@@ -1369,8 +1370,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = AND;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:98:5: ( '&&' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:98:7: '&&'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:99:5: ( '&&' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:99:7: '&&'
 			{
 			match("&&"); 
 
@@ -1390,8 +1391,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = OR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:99:4: ( '||' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:99:6: '||'
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:100:4: ( '||' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:100:6: '||'
 			{
 			match("||"); 
 
@@ -1411,8 +1412,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = ADD_ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:102:2: ( '+=' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:102:4: '+='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:103:2: ( '+=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:103:4: '+='
 			{
 			match("+="); 
 
@@ -1432,8 +1433,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = SUB_ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:104:2: ( '-=' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:104:4: '-='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:105:2: ( '-=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:105:4: '-='
 			{
 			match("-="); 
 
@@ -1453,8 +1454,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = MUL_ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:106:2: ( '*=' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:106:4: '*='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:107:2: ( '*=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:107:4: '*='
 			{
 			match("*="); 
 
@@ -1474,8 +1475,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = DIV_ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:108:2: ( '/=' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:108:4: '/='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:109:2: ( '/=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:109:4: '/='
 			{
 			match("/="); 
 
@@ -1495,8 +1496,8 @@ public class CGrammarLexer extends Lexer {
 		try {
 			int _type = MOD_ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:110:2: ( '%=' )
-			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:110:4: '%='
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:111:2: ( '%=' )
+			// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:111:4: '%='
 			{
 			match("%="); 
 
@@ -1513,7 +1514,7 @@ public class CGrammarLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:8: ( BEGIN | BREAK | CHAR | CONTINUE | DO | DOUBLE | ELSE | END | FOR | IF | INT | RETURN | STRING | VOID | WHILE | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | WS | SL_COMMENT | ML_COMMENT | NUMBER | STR | CHR | IDENT | ADD | SUB | MUL | DIV | MOD | ASSIGN | EQ | NE | ME | LE | MT | LT | NOT | AND | OR | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN )
+		// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:8: ( BEGIN | BREAK | CHAR | CONTINUE | DO | DOUBLE | ELSE | END | FOR | IF | INT | RETURN | STRING | VOID | WHILE | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | WS | SL_COMMENT | ML_COMMENT | NUMBER | STR | CHR | IDENT | ADD | SUB | MUL | DIV | MOD | ASSIGN | EQ | NE | ME | LE | MT | LT | NOT | AND | OR | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN )
 		int alt11=48;
 		alt11 = dfa11.predict(input);
 		switch (alt11) {
@@ -1623,44 +1624,44 @@ public class CGrammarLexer extends Lexer {
 				}
 				break;
 			case 16 :
-				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:91: T__57
-				{
-				mT__57(); 
-
-				}
-				break;
-			case 17 :
-				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:97: T__58
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:91: T__58
 				{
 				mT__58(); 
 
 				}
 				break;
-			case 18 :
-				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:103: T__59
+			case 17 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:97: T__59
 				{
 				mT__59(); 
 
 				}
 				break;
-			case 19 :
-				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:109: T__60
+			case 18 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:103: T__60
 				{
 				mT__60(); 
 
 				}
 				break;
-			case 20 :
-				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:115: T__61
+			case 19 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:109: T__61
 				{
 				mT__61(); 
 
 				}
 				break;
-			case 21 :
-				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:121: T__62
+			case 20 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:115: T__62
 				{
 				mT__62(); 
+
+				}
+				break;
+			case 21 :
+				// D:\\CLangCompiler/src/main/java/clangcompiler/antlr/CGrammar.g:1:121: T__63
+				{
+				mT__63(); 
 
 				}
 				break;
@@ -2042,7 +2043,7 @@ public class CGrammarLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( BEGIN | BREAK | CHAR | CONTINUE | DO | DOUBLE | ELSE | END | FOR | IF | INT | RETURN | STRING | VOID | WHILE | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | WS | SL_COMMENT | ML_COMMENT | NUMBER | STR | CHR | IDENT | ADD | SUB | MUL | DIV | MOD | ASSIGN | EQ | NE | ME | LE | MT | LT | NOT | AND | OR | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN );";
+			return "1:1: Tokens : ( BEGIN | BREAK | CHAR | CONTINUE | DO | DOUBLE | ELSE | END | FOR | IF | INT | RETURN | STRING | VOID | WHILE | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | WS | SL_COMMENT | ML_COMMENT | NUMBER | STR | CHR | IDENT | ADD | SUB | MUL | DIV | MOD | ASSIGN | EQ | NE | ME | LE | MT | LT | NOT | AND | OR | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN );";
 		}
 	}
 
