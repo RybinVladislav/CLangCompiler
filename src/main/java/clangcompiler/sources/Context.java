@@ -7,6 +7,7 @@ package clangcompiler.sources;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  *
@@ -48,5 +49,14 @@ public class Context {
     
     public Context getParentContext(){
         return parentContext;
+    }
+    public int getIdentCount() {
+        int k = 0;
+        for(Entry<String, Ident> entry : idents.entrySet()) {
+            String key = entry.getKey();
+            Ident value = entry.getValue();
+            if (value.getIdentType() != IdentType.Function) k++;
+        }
+        return k;
     }
 }

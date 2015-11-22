@@ -42,8 +42,8 @@ public class MainClass {
             CGrammarParser parser = new CGrammarParser(tokens);
             parser.setTreeAdaptor(new AstNodeTreeAdapter());
             AstNode program = (AstNode) parser.execute().getTree();
-            AstNodePrinter.print(program);
-            System.out.println();
+            //AstNodePrinter.print(program);
+            //System.out.println();
             SemanticChecker.check((AstNode) program, context);
             AstNodePrinter.print(program);
         } catch (Exception ex) {

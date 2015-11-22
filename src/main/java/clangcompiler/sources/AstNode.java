@@ -5,6 +5,7 @@
  */
 package clangcompiler.sources;
 
+import clangcompiler.antlr.CGrammarLexer;
 import org.antlr.runtime.Token;
 import org.antlr.runtime.tree.CommonTree;
 
@@ -15,6 +16,7 @@ import org.antlr.runtime.tree.CommonTree;
 public class AstNode extends CommonTree{
     
     private DataType dataType = DataType.Void;
+    private Ident ident = null;
     
     public AstNode() {
         super();
@@ -40,12 +42,24 @@ public class AstNode extends CommonTree{
         this.dataType = dataType;
     }
     
+    public Ident getIdent() {
+        return ident;
+    }
+    
+    public void setIdent(Ident ident) {
+        this.ident = ident;
+    }
+    
     @Override
     public String toString()
     {
         String result = super.toString();
         if (dataType != DataType.Void)
             result += ", " + SemanticChecker.dataTypeToStr(dataType);
+        if (ident != null) {
+            result += ", " + ident.getIdentType().toString() + ", id = " + Integer.toString(ident.getId());
+        }
         return result;
     }
+
 }

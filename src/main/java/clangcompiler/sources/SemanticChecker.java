@@ -109,7 +109,9 @@ public class SemanticChecker {
                         
                         if (i == 0) {
                             String name = t.getText();
-                            context.setIdent(new Ident(name, context.getParentContext() == null ? IdentType.GlobalVar : IdentType.LocalVar, dataType, nodes.get(0)), name);
+                            Ident idnt = new Ident(name, context.getParentContext() == null ? IdentType.GlobalVar : IdentType.LocalVar, dataType, nodes.get(0));
+                            idnt.setId(context.getIdentCount());
+                            context.setIdent(idnt, name);
                         }
                         
                     } else
@@ -145,6 +147,7 @@ public class SemanticChecker {
                                     String name = t.getChild(1).getText();
                                     Ident idnt = new Ident(name, context.getParentContext() == null ? IdentType.GlobalVar : IdentType.LocalVar, dataType, nodes.get(0));
                                     idnt.setAsArray();
+                                    idnt.setId(context.getIdentCount());
                                     context.setIdent(idnt, name);
                                 }
                             } else { //не задано количество, но обязательно должно быть присваивание
@@ -176,6 +179,7 @@ public class SemanticChecker {
                                     String name = t.getChild(0).getText();
                                     Ident idnt = new Ident(name, context.getParentContext() == null ? IdentType.GlobalVar : IdentType.LocalVar, dataType, nodes.get(0));
                                     idnt.setAsArray();
+                                    idnt.setId(context.getIdentCount());
                                     context.setIdent(idnt, name);
                                 }
                             }
@@ -192,6 +196,7 @@ public class SemanticChecker {
             
             case CGrammarLexer.ARRAYCALL: {
                 Ident ident = context.getIdent(node.getChild(0).getText());
+                check((AstNode)node.getChild(0), context);
                 if (ident == null)
                     throw new Exception(String.format("Unknown identifier %s", node.getChild(0).getText()));
                 if (!ident.isArray())
@@ -233,6 +238,7 @@ public class SemanticChecker {
                     Ident idnt = new Ident(paramName, IdentType.Param, paramDataType, (CommonTree)params.getChild(i));
                     if (t.getType() == CGrammarLexer.ARRAY) 
                         idnt.setAsArray();
+                    idnt.setId(context.getIdentCount());
                     context.setIdent(idnt, paramName);
                 }
                 context.setFunction(func);
@@ -260,12 +266,14 @@ public class SemanticChecker {
                             throw new Exception(String.format("In function %s param %d incompatible types %s %s", node.getChild(0).getText(), i, dataTypeToStr(formalDataType), dataTypeToStr(factDataType)));
                     }
                 }
+                node.setDataType(strToDataType(ident.getNode().getChild(0).getText()));
                 return strToDataType(ident.getNode().getChild(0).getText());
             }
 
             case CGrammarLexer.IDENT:
             {
                 Ident ident = context.getIdent(node.getText());
+                node.setIdent(ident);
                 if (ident == null)
                     throw new Exception(String.format("Unknown identifier %s", node.getText()));
                 if (ident.getIdentType() == IdentType.Function) {
@@ -315,6 +323,7 @@ public class SemanticChecker {
             {
                 if (node.getChild(0).getType() == CGrammarLexer.IDENT) {
                     Ident ident = context.getIdent(node.getChild(0).getText());
+                    check((AstNode)node.getChild(0), context);
                     if (ident == null)
                         throw new Exception(String.format("Unknown identifier %s", node.getChild(0).getText()));
                     if (ident.getIdentType() == IdentType.Function)
@@ -327,6 +336,9 @@ public class SemanticChecker {
                             convert((AstNode) node.getChild(1), DataType.Double);
                         else
                             throw new Exception(String.format("incompatible types %s %s", dataTypeToStr(ident.getDataType()), dataTypeToStr(rightDataType)));
+                    } else {
+                        if (node.getType() != CGrammarLexer.ASSIGN && ident.getDataType() != DataType.Double && ident.getDataType() != DataType.Int)
+                            throw new Exception(String.format("Invalid type for operation %s, line = %d, pos = %d", node.getText(), node.getLine(), node.getTokenStartIndex()));
                     }
                     return DataType.Void;
                 } else
@@ -339,6 +351,9 @@ public class SemanticChecker {
                                 convert((AstNode) node.getChild(1), DataType.Double);
                             else
                                 throw new Exception(String.format("incompatible types %s %s", dataTypeToStr(leftDataType), dataTypeToStr(rightDataType)));
+                        } else {
+                            if (node.getType() != CGrammarLexer.ASSIGN && leftDataType != DataType.Double && leftDataType != DataType.Int)
+                                throw new Exception(String.format("Invalid type for operation %s, line = %d, pos = %d", node.getText(), node.getLine(), node.getTokenStartIndex()));
                         }
                         return DataType.Void;
                     }
