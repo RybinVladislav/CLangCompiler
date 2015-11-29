@@ -16,6 +16,8 @@ import java.util.Map.Entry;
 public class Context {
     private Context parentContext;
     
+    private int count = 0;
+    
     private Map<String, Ident> idents = new HashMap<String, Ident>();
     
     public Context(Context parentContext) {
@@ -29,6 +31,20 @@ public class Context {
     
     public void setIdent(Ident ident, String name) {
         idents.put(name, ident);
+        if (ident.getIdentType() == IdentType.GlobalVar) {
+            Context c = this;
+            while (c.getParentContext() != null) c = c.parentContext;
+            c.increaseCount();
+        } else
+        if (ident.getIdentType() == IdentType.LocalVar){
+            Context c = this;
+            while (c.getParentContext().getParentContext() != null) c = c.parentContext;
+            c.increaseCount();
+        }
+    }
+    
+    public void increaseCount(){
+        count++;
     }
     
     public Ident inThisContext(String name)
@@ -50,13 +66,9 @@ public class Context {
     public Context getParentContext(){
         return parentContext;
     }
-    public int getIdentCount() {
-        int k = 0;
-        for(Entry<String, Ident> entry : idents.entrySet()) {
-            String key = entry.getKey();
-            Ident value = entry.getValue();
-            if (value.getIdentType() != IdentType.Function) k++;
-        }
-        return k;
+    public int getIdentCount() {        
+        if (parentContext == null || parentContext.getParentContext() == null)
+            return count;
+        return parentContext.getIdentCount();
     }
 }
