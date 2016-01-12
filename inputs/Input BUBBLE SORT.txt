@@ -1,0 +1,15 @@
+int main () {
+    int arr[5] = {5, -4, 3, -2, 1};
+    int i, j;
+    for (i = 0; i < 5; i += 1)
+        printInt(arr[i]);
+    for (i = 0; i < 5; i += 1)
+        for (j = 4; j > i; j -= 1)
+            if (arr[j] < arr[i]) {
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+            }
+    for (i = 0; i < 5; i += 1)
+        printInt(arr[i]);
+}

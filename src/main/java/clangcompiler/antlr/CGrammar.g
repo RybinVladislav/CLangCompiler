@@ -39,9 +39,11 @@ tokens {
   RETURN   = 'return'   ;
   
   FUNCCALL;
+  CONVERT;
   
   ARRAY			;
   ARRAYCALL		;
+  ARRAYSET              ;
   ARRAYINIT             ;
 
   VARDECL               ;
@@ -69,7 +71,7 @@ ML_COMMENT:
   }
 ;
 
-NUMBER	: 	('0'..'9')+ ('.' ('0'..'9')+)?
+NUMBER	: 	('-')? ('0'..'9')+ ('.' ('0'..'9')+)?
 ;
 
 STR	:	'"' (.)* '"';
@@ -117,6 +119,9 @@ type	:	INT | CHAR | STRING | DOUBLE | VOID ;
 array_call
 	:	IDENT '[' term ']' -> ^(ARRAYCALL IDENT term);
 
+array_set
+        :       IDENT '[' term ']' -> ^(ARRAYSET IDENT term);
+
 group	:	'('! term ')'!
 		| func_call	
 		| NUMBER
@@ -124,6 +129,7 @@ group	:	'('! term ')'!
 		| CHR
 		| array_call
 		| IDENT
+                | SUB^ IDENT
 		;
 		
 mult	:	group ( ( MUL | DIV | MOD )^ group )* ;
@@ -163,11 +169,11 @@ if_expr	:	IF or_logic expr (ELSE expr)? -> ^(IF or_logic expr expr?);
 while_expr
 	:	WHILE '(' or_logic ')' expr -> ^(WHILE or_logic expr);
 	
-for_expr:	FOR^ '('! uexpr? ';'! or_logic? ';'! uexpr? ')'! expr 
+for_expr:	FOR^ '('! ublock? ';'! or_logic? ';'! ublock? ')'! expr 
 
 ;
 
-do_while:	DO expr WHILE '(' or_logic ')' -> ^(DOWHILE expr or_logic);
+do_while:	DO expr WHILE '(' or_logic ')' -> ^(DOWHILE or_logic expr);
 
 return_expr
 	:	RETURN^ term?;
@@ -177,7 +183,7 @@ sexpr	:	var_expr
 		| CONTINUE
 		| return_expr
 		| func_call
-		| (array_call | IDENT) assign^ term
+		| (array_set | IDENT) assign^ term
                 | IDENT ASSIGN^ BEGIN! term (','! term)* END!
 		| do_while ;
 		
@@ -189,7 +195,9 @@ expr	:	sexpr (';'!)+
 		| cexpr
 		| block_expr;
 		
-uexpr	: 	(sexpr | cexpr) (','! (sexpr | cexpr))* ;
+uexpr	: 	(sexpr | cexpr);
+
+ublock  :       uexpr (',' uexpr*)? -> ^(BLOCK uexpr*);
 		
 block_expr
 	:	BEGIN expr* END -> ^(BLOCK expr*) ;

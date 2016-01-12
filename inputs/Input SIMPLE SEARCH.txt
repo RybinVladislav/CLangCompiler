@@ -1,0 +1,22 @@
+int a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+int search(int x) {
+    int ok = 0;
+    int i = 0;
+    while ((i < 9) && (ok != 1))
+        if (x == a[i]) 
+            ok = 1; 
+        else 
+            i += 1;
+    if (ok == 1) 
+        return i;
+    else return -1;
+}
+
+void main() {
+    int k = parseInt(readLine());
+    int pos = search(k);
+    if (pos > -1) 
+        printInt(pos);
+    else printLine("Not found");
+}
